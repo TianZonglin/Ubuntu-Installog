@@ -3,7 +3,7 @@
 ### laptop info
 
 - MSI GE62 490, with a Nvidia Gefore 960M graphics card
- asjdia
+  asjdia
 - core is intel i7-6700HQ with inside graphics card
 - single system (ubuntu)
 
