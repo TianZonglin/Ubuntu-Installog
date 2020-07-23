@@ -9,11 +9,14 @@
 ### install system
 
 1. prepare a usb installer (with another computer)
+
 note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
 2. turn off the **secure boot** in BIOS
 3. follow and finish the standard installation process.
+
 note: do NOT set grub (eg. nomodeset) if you can install smoothly. After setting ubuntu's configration, you can log into the new Ubuntu system (now, with the core graphics card and drivers)
 4. agree the 1st time update require
+
 note: when you first get into the Ubunutu, you may get a update information, DO agree that, the principle is that we agree all updates during the process of installation, but after we get a stable and complete system, then we stop update anything, try to keep the system having no change, if not, there might be some conflict between the new updates and the old drivers. 
 5. reboot
 
