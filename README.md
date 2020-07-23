@@ -42,8 +42,8 @@ note: all stuff could be handled automatically by system if we use this way to i
 
 
 Now, the installation of Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok or just check the system information and see the dirvers name.
-![](http://i.imgur.com/GgfSqCM.png)
-![](http://i.imgur.com/Euj6tQy.png)
+//http://i.imgur.com/GgfSqCM.png
+//http://i.imgur.com/Euj6tQy.png
 
 
 ====
@@ -51,7 +51,7 @@ Now, the installation of Nvidia driver was finished. You can use `nvidia-smi` to
 ### install cuda-toolkit
 
 1. select cuda-10_\* or other version (here I selet 10.0)
-![](http://i.imgur.com/6xPtxju.png)
+//http://i.imgur.com/6xPtxju.png
 
 2. execute
 
@@ -75,7 +75,7 @@ $ cd /usr/local/cuda/samples/bin/x86_64/linux/release
 $ ./deviceQuery
 ```
 
-![](http://i.imgur.com/jJ7vpNw.png)
+/http://i.imgur.com/jJ7vpNw.png
  
 5. extra IMPORTANT config
 note: add two environment params into /etc/profile
@@ -132,18 +132,18 @@ $ ./projwiz -f DATA/segmentation lamp
 ```
 
 All stuff about GL-project has been done!
-![](http://i.imgur.com/rDCtEId.png)
+//http://i.imgur.com/rDCtEId.png
 
 ### install personal softwares
 
 - screenshot: flameshot
 use `sudo apt-get install flameshot`
 set the shortcut
-![](http://i.imgur.com/id2PPYj.png)
+//http://i.imgur.com/id2PPYj.png
 
 - vscode
 install it directly in APP (Ubuntu Software).
-![](http://i.imgur.com/W971ERc.png)
+//http://i.imgur.com/W971ERc.png
 
 then, we can program code with vsc
   - open folder (ProjectionExplain)
@@ -159,13 +159,17 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 2. logout and login system or reboot
 3. open and config Tweaks
+
 **panel style**
+
 extensions: dash to panel
 note: with right-click, you can wake the panel-setting window, and some slight changes could be made in here.
-http://i.imgur.com/OKrQ67r.png
+
+//http://i.imgur.com/OKrQ67r.png
 
 
 **menu style**
+
 extension: applications menu
 note: turn on this extension could display the app manager like windows starting menu.
 
@@ -182,7 +186,8 @@ Till now, the basic theme setting has been finished, and the style now is very s
 
 - updates
 just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', unless you would get errors when you install new packages/tools/...
-http://i.imgur.com/w7Kvc7X.png
+
+//http://i.imgur.com/w7Kvc7X.png
 
 - when desktop crash 
 like stucking when turn off some windows or stucking after running something for a long time. When this happened, do NOT shutdown the system by cut down the power! that's a dangerous behavior, system core maybe ruined by this.
