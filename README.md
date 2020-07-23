@@ -4,14 +4,13 @@
 
 - MSI GE62 490, with a Nvidia Gefore 960M graphics card
   asjdia
+  
 - core is intel i7-6700HQ with inside graphics card
 - single system (ubuntu)
 
 ### install system
 
-1. prepare a usb installer (with another computer)
-
-note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
+1. prepare a usb installer (with another computer), Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
 2. turn off the **secure boot** in BIOS
 3. follow and finish the standard installation process.
 
