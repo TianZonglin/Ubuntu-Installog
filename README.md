@@ -135,7 +135,7 @@ $ sudo apt install cmake
 $ cd ProjectionExplain/LIBRARY/glui-master
 $ rm CMakeCache.txt
 $ make clean
-$ mkdir build
+$ mkdir build && cd build
 $ cmake ..
 $ make install
 $ cd ProjectionExplain/
@@ -196,7 +196,7 @@ Till now, the basic theme setting has been finished, and the style now is very s
 
 **X.1 updates.** 
 
-just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', unless you would get errors when you install new packages/tools/...
+just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', or you would get errors when you install new packages/tools/...
  (sreenshot:http://i.imgur.com/w7Kvc7X.png)
 
 **X.2 when desktop crash.** 
