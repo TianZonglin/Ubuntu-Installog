@@ -1,5 +1,7 @@
 ## Full steps of Ubuntu installation (with GL stuff)
 
+[**中文版本.**](https://www.cz5h.com/article/483a.html) 
+
 ### 0. laptop info
 
 - MSI GE62 490, with a Nvidia Gefore 960M graphics card
