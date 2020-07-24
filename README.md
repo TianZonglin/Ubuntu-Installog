@@ -34,7 +34,6 @@ Note：we get the recommendation version here！
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
 $ sudo apt-get update
 $ sudo ubuntu-drivers devices
-
 ```
 
 **2.2 install drivers in APP** (Software and Updates)
@@ -195,12 +194,12 @@ Till now, the basic theme setting has been finished, and the style now is very s
 
 ### X. Ubuntu Using Tips
 
-- **updates.** 
+**X.1 updates.** 
 
 just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', unless you would get errors when you install new packages/tools/...
  (sreenshot:http://i.imgur.com/w7Kvc7X.png)
 
-- **when desktop crash.** 
+**X.2 when desktop crash.** 
 
 like stucking when turn off some windows or stucking after running something for a long time. When this happened, do NOT shutdown the system by cut down the power! that's a dangerous behavior, system core maybe ruined by this.
 
