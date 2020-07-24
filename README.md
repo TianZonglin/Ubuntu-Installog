@@ -1,6 +1,6 @@
 ## Full steps of Ubuntu installation (with GL stuff)
 
-[**中文版本.**](https://www.cz5h.com/article/483a.html) 
+[**\中\文\版\本\**](https://www.cz5h.com/article/483a.html) 
 
 ### 0. laptop info
 
