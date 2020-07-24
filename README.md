@@ -26,7 +26,9 @@ Note: when you first get into the Ubunutu, you may get a update information, DO 
 
 ### 2. install nvidia dirver
  
-**2.1 add repository then we can check devices.** Note：we get the recommendation version here！
+**2.1 add repository then we can check devices.** 
+
+Note：we get the recommendation version here！
 
 ```
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
