@@ -191,9 +191,32 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 Till now, the basic theme setting has been finished, and the style now is very similar with my windows desktop. 
 
+### 8. unimportant changes
 
 
 
+**8.1 add support of chinese** 
+
+- add extra language in system
+- install sougou pinyin
+
+**8.2 change screeen solution** 
+
+- connect high-solution screen (second)
+- make a sh file with xrandr of high solution cofiguration, like 2k.
+- execute it after login the system
+
+Note: the original system doesn't support higher solution more than 1080, so we need to add new solution and trigger the change, it's better NOT to make it into boot configration, because that maybe casue crash when initial the screen without a high solution display screen.
+  
+
+**8.3 add support of specific softwares** 
+
+like tencent qq, or redalert2, or other applications.
+
+- method-1: install wine from Ubuntu-Software, then install windows apps with wine. With this, we could paly redalert2 or chat with windows-qq in ubuntu.
+- method-2: install a android simulator, I highly rencommand this one ([download link]()), it's stable and fast and could give us the same using experience of andriod pad, if you just want to use qq or wechat in ubuntu, you need to try this. 
+  
+  
 ### X. Ubuntu Using Tips
 
 **X.1 updates.** 
