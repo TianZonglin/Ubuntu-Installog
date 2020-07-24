@@ -1,7 +1,5 @@
 ## Full steps of Ubuntu installation (with GL stuff)
 
-[**中 文 版 本**](https://www.cz5h.com/article/483a.html) 
-
 ### 0. laptop info
 
 - MSI GE62 490, with a Nvidia Gefore 960M graphics card
@@ -206,6 +204,9 @@ just delay the update checking (I don't know how to stop it)! do NOT cancel the 
 like stucking when turn off some windows or stucking after running something for a long time. When this happened, do NOT shutdown the system by cut down the power! that's a dangerous behavior, system core maybe ruined by this.
 
 the right way is: Ctrl+Alt+F2/3/4, log into the tty2/3/4, then restart gdm/lightdm, or rollback the wrong options here if you remember. Or do nothing, just wait the system rerun again, sometimes it could be reworked after waiting a while.
+
+
+[**中 文 版 本**](https://www.cz5h.com/article/483a.html) 
 
 
 
