@@ -4,13 +4,13 @@
 
 ### 0. laptop info
 
-- MSI GE62 490, with a Nvidia Gefore 960M graphics card
-- core is intel i7-6700HQ with inside graphics card
+- MSI GE62 490, with an Nvidia GeForce 960M graphics card
+- the core is intel i7-6700HQ with an inside graphics card
 - single system (ubuntu)
 
-### 1. install system
+### 1. install the system
 
-**1.1 prepare a usb installer (with another computer).** 
+**1.1 prepare a USB installer (with another computer).** 
 
 Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
 
@@ -18,11 +18,11 @@ Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.c
 
 **1.3 follow and finish the standard installation process.** 
 
-Note: do NOT set grub (eg. nomodeset) if you can install smoothly. After setting ubuntu's configration, you can log into the new Ubuntu system (now, with the core graphics card and drivers)
+Note: do NOT set grub (eg. nomodeset) if you can install smoothly. After setting ubuntu's configuration, you can log into the new Ubuntu system (now, with the core graphics card and drivers)
 
 **1.4 agree the 1st time update require.** 
 
-Note: when you first get into the Ubunutu, you may get a update information, DO agree that, the principle is that we agree all updates during the process of installation, but after we get a stable and complete system, then we stop update anything, try to keep the system having no change, if not, there might be some conflict between the new updates and the old drivers. 
+Note: when you first get into the Ubunutu, you may get a piece of update information, DO agree that, the principle is that we agree with all updates during the process of installation, but after we get a stable and complete system, then we stop update anything, try to keep the system having no change, if not, there might be some conflict between the new updates and the old drivers. 
 
 **1.5 reboot**
 
@@ -49,13 +49,13 @@ Software and Updates ->
 
 **2.3 do NOT set blacklist of nouveau or set grub.** 
 
-Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with nvidia drivers!
+Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with Nvidia drivers!
 
-Now, the installation of Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok (sreenshot:http://i.imgur.com/GgfSqCM.png) or just check the system information and see the dirvers name. (sreenshot:http://i.imgur.com/Euj6tQy.png)
+Now, the installation of the Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok (sreenshot:http://i.imgur.com/GgfSqCM.png) or just check the system information and see the drivers name. (sreenshot:http://i.imgur.com/Euj6tQy.png)
  
 ### 3. install cuda-toolkit
 
-**3.1 select cuda-10_\* or other version** (here I selet 10.0)
+**3.1 select cuda-10_\* or another version** (here I select 10.0)
 
 (sreenshot:http://i.imgur.com/6xPtxju.png)
 
@@ -94,7 +94,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda/lib64/
 ```
  
-Now cuda installation is finished, actually with samples' test, we can also make sure that the GPU driver worked well.
+Now cuda installation is finished, actually, with samples' test, we can also make sure that the GPU driver worked well.
 
 ### 4. install GL stuff
 
@@ -149,7 +149,7 @@ $ ./projwiz -f DATA/segmentation lamp
 All stuff about GL-project has been done!
  (sreenshot:http://i.imgur.com/rDCtEId.png)
 
-### 6. install personal softwares
+### 6. install personal software
 
 **6.1 screenshot: flameshot**
 
@@ -168,7 +168,7 @@ then, we can program code with vsc
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
 
 
-### 7. change theme with Tweaks
+### 7. change the theme with Tweaks
 
 **7.1 install tweaks and its extensions**
 
@@ -185,36 +185,36 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
  
 **7.4 change menu style.** 
 
-(extension: applications menu) Note: turn on this extension could display the app manager like windows starting menu. Here I just changed the applications margin and hide the applications icon and show desktop's button (like windows).
+(extension: applications menu) Note: turn on this extension could display the app manager like windows starting menu. Here I just changed the margin of the application and hide the application's icon and show the desktop's button (like windows).
 
 **7.5 change the wallpaper.**
 
-Till now, the basic theme setting has been finished, and the style now is very similar with my windows desktop. 
+Till now, the basic theme set has been finished, and the style now is very similar to my windows desktop. 
 
 ### 8. unimportant changes
 
 
 
-**8.1 add support of chinese** 
+**8.1 add support of Chinese** 
 
-- add extra language in system
-- install sougou pinyin
+- add extra language in the system
+- install Sogou pinyin
 
-**8.2 change screeen solution** 
+**8.2 change screen solution** 
 
 - connect high-solution screen (second)
-- make a sh file with xrandr of high solution cofiguration, like 2k.
+- make a sh file with xrandr of high solution configuration, like 2k.
 - execute it after login the system
 
-Note: the original system doesn't support higher solution more than 1080, so we need to add new solution and trigger the change, it's better NOT to make it into boot configration, because that maybe casue crash when initial the screen without a high solution display screen.
+Note: the original system doesn't support higher solution more than 1080, so we need to add new solution and trigger the change, it's better NOT to make it into boot configration, because that may be cause crash when initial the screen without a high solution display screen.
   
 
-**8.3 add support of specific softwares** 
+**8.3 add support of specific software** 
 
 like tencent qq, or redalert2, or other applications.
 
 - method-1: install wine from Ubuntu-Software, then install windows apps with wine. With this, we could paly redalert2 or chat with windows-qq in ubuntu.
-- method-2: install a android simulator, I highly rencommand this one ([download link]()), it's stable and fast and could give us the same using experience of andriod pad, if you just want to use qq or wechat in ubuntu, you need to try this. 
+- method-2: install an android simulator, I highly recommend this one ([download link](https://www.linzhuotech.com/index.php/home/index/download.html)), it's stable and fast and could give us the same using experience of android pad, if you just want to use qq or wechat in ubuntu, you need to try this. 
   
   
 ### X. Ubuntu Using Tips
@@ -226,9 +226,9 @@ just delay the update checking (I don't know how to stop it)! do NOT cancel the 
 
 **X.2 when desktop crash.** 
 
-like stucking when turn off some windows or stucking after running something for a long time. When this happened, do NOT shutdown the system by cut down the power! that's a dangerous behavior, system core maybe ruined by this.
+like stucking when turning off some windows or stucking after running something for a long time. When this happened, do NOT shut down the system by cut down the power! that's a dangerous behavior, system core may be ruined by this.
 
-the right way is: Ctrl+Alt+F2/3/4, log into the tty2/3/4, then restart gdm/lightdm, or rollback the wrong options here if you remember. Or do nothing, just wait the system rerun again, sometimes it could be reworked after waiting a while.
+the right way is: Ctrl+Alt+F2/3/4, log into the tty2/3/4, then restart gdm/lightdm, or rollback the wrong options here if you remember. Or do nothing, just wait for the system rerun again, sometimes it could be reworked after waiting a while.
 
 
 [**中 文 版 本**](https://www.cz5h.com/article/483a.html) 
