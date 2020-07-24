@@ -1,1 +1,164 @@
+### 0. laptop info
 
+- MSI GE62 490, with an Nvidia GeForce 960M graphics card
+- the core is intel i7-6700HQ with an inside graphics card
+- single system (ubuntu)
+
+### 1. install the system
+
+**1.1 prepare a USB installer (with another computer).** 
+
+Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
+
+**1.2 turn off the secure boot in BIOS**
+
+**1.3 follow and finish the standard installation process.** 
+
+Note: do NOT set grub (eg. nomodeset) if you can install smoothly. After setting ubuntu's configuration, you can log into the new Ubuntu system (now, with the core graphics card and drivers)
+
+**1.4 agree the 1st time update require.** 
+
+Note: when you first get into the Ubunutu, you may get a piece of update information, DO agree that, the principle is that we agree with all updates during the process of installation, but after we get a stable and complete system, then we stop update anything, try to keep the system having no change, if not, there might be some conflict between the new updates and the old drivers. 
+
+**1.5 reboot**
+
+### 2. install nvidia dirver
+ 
+**2.1 add repository then we can check devices.** 
+
+Note：we get the recommendation version here！
+
+```
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt-get update
+$ sudo ubuntu-drivers devices
+```
+
+**2.2 install drivers in APP** (Software and Updates)
+
+```
+Software and Updates ->
+    additional drivers ->
+        select the recommandation version ->
+            apply
+```
+
+**2.3 do NOT set blacklist of nouveau or set grub.** 
+
+Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with Nvidia drivers!
+
+Now, the installation of the Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok (sreenshot:http://i.imgur.com/GgfSqCM.png) or just check the system information and see the drivers name. (sreenshot:http://i.imgur.com/Euj6tQy.png)
+ 
+### 3. install cuda-toolkit
+
+**3.1 select cuda-10_\* or another version** (here I select 10.0)
+
+(sreenshot:http://i.imgur.com/6xPtxju.png)
+
+**3.2 execute**
+
+```
+$ sudo chmod 777 cuda-10_\*.run
+$ sudo sh cuda-10_\*.run
+```
+
+**3.3 during this process.** Note: we have installed the driver by ourselves, so here say no. 
+
+```
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
+(y)es/(n)o/(q)uit: n
+```
+
+**3.4 test samples**
+ 
+```
+$ cd /usr/local/cuda/samples
+$ make
+  (10 minutes later)
+$ cd /usr/local/cuda/samples/bin/x86_64/linux/release
+$ ./deviceQuery
+```
+
+(sreenshot:http://i.imgur.com/jJ7vpNw.png)
+ 
+**3.5 extra IMPORTANT config.** 
+
+Note: add two environment params into /etc/profile, if not, maybe you could get the error says: libcudart.so.10.0: cannot open shared object file: No such file or directory
+
+```
+export PATH=/usr/local/cuda/bin:$PATH 
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda/lib64/
+```
+ 
+Now cuda installation is finished, actually, with samples' test, we can also make sure that the GPU driver worked well.
+
+### 4. install GL stuff
+
+**4.1 for GL/gl.h use:**
+
+```
+sudo apt install mesa-common-dev
+```
+
+**4.2 GL/glu.h:**
+
+```
+sudo apt install libglu1-mesa-dev freeglut3-dev
+```
+
+**4.3 others:**
+
+```
+libglfw3-dev libgles2-mesa-dev libglew-dev 
+```
+
+**4.4 just use all-in-one command.** Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
+
+```
+$ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev libglew-dev 
+```
+
+### 5. install project stuff
+
+**5.1 base tools**
+
+```
+$ sudo apt install vim
+$ sudo apt install cmake
+```
+
+**5.2 rebuild project**
+
+```
+$ cd ProjectionExplain/LIBRARY/glui-master
+$ rm CMakeCache.txt
+$ make clean
+$ mkdir build && cd build
+$ cmake ..
+$ make install
+$ cd ProjectionExplain/
+$ make clean
+$ make 
+$ ./projwiz -f DATA/segmentation lamp
+```
+
+All stuff about GL-project has been done!
+ (sreenshot:http://i.imgur.com/rDCtEId.png)
+
+### 6. install personal software
+
+**6.1 screenshot: flameshot**
+
+use `sudo apt-get install flameshot`
+
+set the shortcut
+ (sreenshot:http://i.imgur.com/id2PPYj.png)
+
+**6.2 vscode**
+
+install it directly in APP (Ubuntu Software).
+ (sreenshot:http://i.imgur.com/W971ERc.png)
+
+then, we can program code with vsc
+  - open folder (ProjectionExplain)
+  - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
