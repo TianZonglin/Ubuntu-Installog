@@ -109,7 +109,7 @@ sudo apt install mesa-common-dev
 sudo apt install libglu1-mesa-dev freeglut3-dev
 ```
 
-**4.3 others: **
+**4.3 others:**
 
 ```
 libglfw3-dev libgles2-mesa-dev libglew-dev 
