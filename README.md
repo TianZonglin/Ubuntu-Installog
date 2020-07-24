@@ -2,6 +2,8 @@
 
 ## Full steps of Ubuntu installation (with GL stuff)
 
+This doc includes two parts of Installations and PersonalSettings.
+
 ### 0. laptop info
 
 - MSI GE62 490, with an Nvidia GeForce 960M graphics card
