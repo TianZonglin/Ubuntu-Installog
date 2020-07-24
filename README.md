@@ -1,3 +1,5 @@
+![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/fjdsuiohoviwe23424.png)
+
 ## Full steps of Ubuntu installation (with GL stuff)
 
 ### 0. laptop info
