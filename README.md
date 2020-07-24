@@ -200,13 +200,13 @@ Till now, the basic theme set has been finished, and the style now is very simil
 - add extra language in the system
 - install Sogou pinyin
 
-**8.2 change screen solution** 
+**8.2 change screen resolution** 
 
-- connect high-solution screen (second)
-- make a sh file with xrandr of high solution configuration, like 2k.
+- connect high-resolution (second) screen 
+- make a sh file with xrandr of high resolution configuration, like 2k.
 - execute it after login the system
 
-Note: the original system doesn't support higher solution more than 1080, so we need to add new solution and trigger the change, it's better NOT to make it into boot configration, because that may be cause crash when initial the screen without a high solution display screen.
+Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change, it's better NOT to make it into boot configuration, because that may be cause crash when initial the screen with its original low-resolution screen.
   
 
 **8.3 add support of specific software** 
