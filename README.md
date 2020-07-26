@@ -198,8 +198,23 @@ Till now, the basic theme set has been finished, and the style now is very simil
 
 **8.1 add support of Chinese** 
 
-- add extra language in the system
-- install Sogou pinyin
+1. add extra language in the system
+
+```
+Go to Settings 
+-> Region & Languages
+    -> manage installed language
+        -> if get the message of 'installed not complete' then just install
+            -> click 'Install/Remove Languages' 
+                -> choose Chinese then install (maybe need double-click)
+            -> then in 'Language for menu and windows' 
+                -> drag Chinese up to the 1st position
+System now could be displayed by Chinese.
+            
+```
+
+2. install fcitx
+3. install Sogou pinyin
 
 **8.2 change screen resolution** 
 
