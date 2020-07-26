@@ -349,7 +349,7 @@ Just search 'location' in settings and change `Workbench › Panel: Default Loca
 
  @files display order in Explorer (left area)
  
-Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's useful for some make/cmake projects, which has a lot of \*.cpp or \*.o files, they're mixed in the default setting, but it should be sorted by type so that we can have a clear group of different files.
+Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's useful for some make/cmake projects, which has a lot of \*.cpp or \*.o files, they're mixed with the default setting, but it should be sorted by type so that we can have a clear group of different files.
  
 The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com/g7OehEL.png)
  
