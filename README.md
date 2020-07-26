@@ -179,23 +179,21 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 **7.2 logout and login system or reboot**
 
-**7.3 change panel style.** 
+**7.3 change panel style** 
 
 (extensions: dash to panel) Note: with right-click, you can wake the panel-setting window, and some slight changes could be made in here.
  (sreenshot:http://i.imgur.com/OKrQ67r.png)
  
-**7.4 change menu style.** 
+**7.4 change menu style** 
 
 (extension: applications menu) Note: turn on this extension could display the app manager like windows starting menu. Here I just changed the margin of the application and hide the application's icon and show the desktop's button (like windows).
 
-**7.5 change the wallpaper.**
+**7.5 change the wallpaper**
 
 Till now, the basic theme set has been finished, and the style now is very similar to my windows desktop. 
 
 ### 8. unimportant changes
-
-
-
+ 
 **8.1 add support of Chinese** 
 
 1. add extra language in the system
