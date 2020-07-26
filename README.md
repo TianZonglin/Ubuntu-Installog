@@ -212,7 +212,7 @@ Go to Settings
 -> now in 'Region & Language', the Language has been changed to Chinese automatically.   
 ```
 
-Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Douwloads, Pictures, Videos, then I suggest  that let the system keep the old/English name, cause chinese characters could be hard to use in terminal or code.
+Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Douwloads, Pictures, Videos, then I suggest  that let the system keep the old/English name, cause chinese characters could be hard to use in terminal or code. (sreenshot: http://i.imgur.com/l5sLZwZ.png)
 
 2. install SogouPinyin
 
@@ -243,7 +243,7 @@ Note: the above three parts are not the same thing, please set them one by one. 
 - make a sh file with xrandr of high resolution configuration, like 2k.
 - execute it after login the system
 
-Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change, it's better NOT to make it into boot configuration, because that may be cause crash when initial the screen with its original low-resolution screen.
+Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change, it's better NOT to make it into boot configuration, because that might cause crash when initial the screen with its original low-resolution screen. With the sh-shell, we can make sure that we run it manually with our high-resolution screen, that's impotant! 
   
 
 **8.3 add support of specific software** 
