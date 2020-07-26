@@ -209,11 +209,24 @@ Go to Settings
                 -> choose Chinese then install (maybe need double-click)
             -> then in 'Language for menu and windows' 
                 -> drag Chinese up to the 1st position
--> now in 'Region & Language', the Language has been changed to Chinese automatically.
-After logout and login, System now could be displayed by Chinese.           
+-> now in 'Region & Language', the Language has been changed to Chinese automatically.   
 ```
 
-2. install fcitx
+Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Douwloads, Pictures, Videos, then I suggest  that let the system keep the old/English name, cause chinese characters could be hard to use in terminal or code.
+
+2. install fcitx and change input source
+
+```
+$ sudo apt install fcitx
+then, go to Settings
+    -> manage  installed language
+        -> change the  'Input System'(default is IBus) to fictx
+        -> then click  'apply system-wild'
+-> In the end , you'd better to reboot again.
+```
+
+Note: tha above two parts are not the same thing, please set them one by one .
+
 3. install Sogou pinyin
 
 **8.2 change screen resolution** 
