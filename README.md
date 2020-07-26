@@ -209,8 +209,8 @@ Go to Settings
                 -> choose Chinese then install (maybe need double-click)
             -> then in 'Language for menu and windows' 
                 -> drag Chinese up to the 1st position
-System now could be displayed by Chinese.
-            
+-> now in 'Region & Language', the Language has been changed to Chinese automatically.
+After logout and login, System now could be displayed by Chinese.           
 ```
 
 2. install fcitx
