@@ -286,9 +286,9 @@ like tencent qq, or redalert2, or other applications.
 - cursor -> Adwaita-default
 
 ```
-The default font family are :
+The default font family  (4 items) are :
     Ubuntu/11, Ubuntu Regular/11, Sans Regular/11, Ubuntu Mono Regular/13.
-then I set 1-3 font family to Ubuntu Medium and 4 to Ubuntu Mono Bold with the same font-szie but zoom ratio is 1.3.
+then I set 1-3's font family to Ubuntu Medium with the same font-szie but zoom ratio is 1.3.
 ```
 
 **8.5 other useful tools and settings**
