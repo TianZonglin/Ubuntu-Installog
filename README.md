@@ -241,7 +241,33 @@ With Chinese support, we can then setting more slight changes with Tweaks (sreen
 
 - connect high-resolution (second) screen 
 - make a sh file with xrandr of high resolution configuration, like 2k.
-- execute it after login the system
+
+```
+Firstly, we need to get some specific parameters.
+
+$ cvt 2560 1440
+//the output here is what we used in xrandr below
+$ xrandr -q
+//check display monitors, we need to make sure the ID of primary and second screen, here are eDP-1-1(primary) and HDMI-1-2(second). 
+
+resolution.sh：
+
+xrandr --newmode "2560x1440_55.00"  284.00  2560 2744 3016 3472  1440 1443 1448 1489 -hsync +vsync
+xrandr --addmode HDMI-1-2 "2560x1440_55.00"
+xrandr --output HDMI-1-2 --mode "2560x1440_55.00"
+```
+
+- use xrandr to set primary monitor, I just use the second screen (turn off the laptop's screen), so just run:
+
+```
+xrandr --output HDMI-1-2 --auto --output eDP-1-1 --off
+```
+
+- finally, after we login system, just execute it after login the system (chmod 777 resolution.sh, then we just need to run 'sh resolution.sh')
+
+
+
+
 
 Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change, it's better NOT to make it into boot configuration, because that might cause crash when initial the screen with its original low-resolution screen. With the sh-shell, we can make sure that we run it manually with our high-resolution screen, that's impotant! 
   
