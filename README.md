@@ -192,6 +192,19 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 Till now, the basic theme set has been finished, and the style now is very similar to my windows desktop. 
 
+**7.6 Unessential changes with Tweaks**
+
+theme ->  Adwaita-dark
+cursor -> Adwaita-default
+
+```
+The default font setting is :
+    Ubuntu/11, Ubuntu Regular/11, Sans Regular/11, Ubuntu Mono Regular/13
+    the left options is the third opts and first opts, and zoom ratio is 1.0
+then I set 1-3 font family to Ubuntu Medium and 4 to Ubuntu Mono Bold with zoom ratio 1.3
+```
+
+
 ### 8. unimportant changes
  
 **8.1 add support of Chinese** 
@@ -240,7 +253,7 @@ With Chinese support, we can then setting more slight changes with Tweaks (sreen
 **8.2 change screen resolution** 
 
 - connect high-resolution (second) screen 
-- make a sh file with xrandr of high resolution configuration, like 2k.
+- make a sh file with xrandr of high resolution configuration, like 2k. There are 4 commands in sh file, and the 1st one is to use xrandr to set primary monitor, I just use the second screen (turn off the laptop's screen). 
 
 ```
 Firstly, we need to get some specific parameters.
@@ -250,20 +263,23 @@ $ cvt 2560 1440
 $ xrandr -q
 //check display monitors, we need to make sure the ID of primary and second screen, here are eDP-1-1(primary) and HDMI-1-2(second). 
 
-resolution.sh：
+resolution.sh (just 4 lines)：
 
+xrandr --output HDMI-1-2 --auto --output eDP-1-1 --off
 xrandr --newmode "2560x1440_55.00"  284.00  2560 2744 3016 3472  1440 1443 1448 1489 -hsync +vsync
 xrandr --addmode HDMI-1-2 "2560x1440_55.00"
 xrandr --output HDMI-1-2 --mode "2560x1440_55.00"
+
+then chmod 777 resolution.sh, and set it executed automatically:
+
+$ crontab -e
+     -> select editor, then will open a new file
+         -> just add 1 line: 
+             @reboot /home/user/test.sh
+         -> then 'wq' (quit with save)
 ```
 
-- use xrandr to set primary monitor, I just use the second screen (turn off the laptop's screen), so just run:
-
-```
-xrandr --output HDMI-1-2 --auto --output eDP-1-1 --off
-```
-
-- finally, after we login system, just execute it after login the system (chmod 777 resolution.sh, then we just need to run 'sh resolution.sh')
+- finally, after we login system, all setting could be done by itself.
 
 
 
