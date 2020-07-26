@@ -156,6 +156,8 @@ set the shortcut
 
 **6.2 vscode**
 
+**..more settings could be found in chapter 8.5..**
+
 install it directly in APP (Ubuntu Software).
  (sreenshot:http://i.imgur.com/W971ERc.png)
 
