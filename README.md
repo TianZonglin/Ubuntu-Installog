@@ -162,12 +162,16 @@ set the shortcut
 
 **6.2 vscode**
 
+**..more settings could be found in chapter 8.5..**
+
 install it directly in APP (Ubuntu Software).
  (sreenshot:http://i.imgur.com/W971ERc.png)
 
 then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
+
+
 
 ### 7. change the theme with Tweaks
 
@@ -289,9 +293,9 @@ The default font setting is :
 then I set 1-3 font family to Ubuntu Medium and 4 to Ubuntu Mono Bold with zoom ratio 1.3
 ```
 
-**8.5 other useful tools or softwares**
+**8.5 other useful tools and settings**
 
-- brightness control
+- **brightness control**
 
 I use RedShift here, other similar softwares like F.lux is good as well. Using RedShift is simple:
 
@@ -302,6 +306,50 @@ I use RedShift here, other similar softwares like F.lux is good as well. Using R
 -> then, brightness will changed
 -> fianlly, with its menu, you can set it open with your system.
 ```
+ 
+ - **vscode preferances**
+ 
+ @theme
+ 
+ File -> Preferences -> Color Theme, I'd like to use `Tommorrow Night Blue`, which is also a kind of dark theme but could also work well at the day time.
+ 
+ @font
+ 
+ File -> Preferences -> Settings, then we use 'search' (search 'font') to locate the items that we need to change, I'd like to set these parameters by json format, and the programming stuff settings are as below:
+ 
+ ```
+{
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontWeight": "600",
+    "editor.fontFamily": "monospace",
+    "editor.fontSize": 15.5,
+    "terminal.integrated.fontSize": 12,
+    "workbench.colorTheme": "Tomorrow Night Blue"
+}
+I like this combination, it worked very well in my 2k screen, 
+```
+
+If you want to make the font same with vscode in Windows (specifically, it's Consolas), then you need to install new fonts manually, you can't use new fonts if you don't install them at first.
+
+```
+$ wget https://down.gloriousdays.pw/Fonts/Consolas.zip
+$ unzip Consolas.zip
+$ sudo mkdir -p /usr/share/fonts/consolas
+$ sudo cp consola*.ttf /usr/share/fonts/consolas/
+$ sudo chmod 644 /usr/share/fonts/consolas/consola*.ttf
+$ cd /usr/share/fonts/consolas
+$ sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
+//check the installed fonts
+$ fc-list  
+```
+
+@terminal's location
+
+Just search 'location' in settings and change `Workbench › Panel: Default Location` from bottom to left, because I want to have more vertical space to read long codes while we usually don't write long sentences/codes in lines, so it has more free horizontal space that we can settle the terminal. 
+
+ @files display order in Explorer (left area)
+ 
+Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's useful for some make/cmake projects, which has a lot of \*.cpp or \*.o files, they're mixed in default setting, but it should be sorted by type so that we can have a clear group of different files.
  
 ### X. Ubuntu Using Tips
 
