@@ -8,7 +8,7 @@ This doc includes two parts of [Installations](https://github.com/TianZonglin/Ub
 
 - MSI GE62 490, with an Nvidia GeForce 960M graphics card
 - the core is intel i7-6700HQ with an inside graphics card
-- single system (ubuntu)
+- single system (ubuntu-18.04-LTS)
 
 ### 1. install the system
 
