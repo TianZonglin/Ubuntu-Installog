@@ -214,7 +214,11 @@ Go to Settings
 
 Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Douwloads, Pictures, Videos, then I suggest  that let the system keep the old/English name, cause chinese characters could be hard to use in terminal or code.
 
-2. install fcitx and change input source
+2. install Sogou pinyin
+
+Note:  Download the package from Browser, [Linux_64-bit.deb.](https://pinyin.sogou.com/linux/?r=pinyin) Then, just  click the deb file and click 'install'. If you use a old Ubuntu version, just follow [this page](https://pinyin.sogou.com/linux/help.php). After that, you also need reboot the system.
+ 
+3. install fcitx and change input source to SogouPinyin
 
 ```
 $ sudo apt install fcitx
@@ -222,12 +226,14 @@ then, go to Settings
     -> manage  installed language
         -> change the  'Input System'(default is IBus) to fictx
         -> then click  'apply system-wild'
--> In the end , you'd better to reboot again.
+-> Now , you'd better to reboot, then
+    -> find 'keybord icon' in the task bar (default location is top-right corner)
+        -> click 'configure current input method'
+        
 ```
 
-Note: tha above two parts are not the same thing, please set them one by one .
+Note: the above three parts are not the same thing, please set them one by one. And always remember to reboot system or you maybe can't see the additions.
 
-3. install Sogou pinyin
 
 **8.2 change screen resolution** 
 
