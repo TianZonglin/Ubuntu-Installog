@@ -106,16 +106,16 @@ like tencent qq, or redalert2, or other applications.
 
 **8.4 some unessential changes with Tweaks**
 
-theme ->  Adwaita-dark
 
-cursor -> Adwaita-default
+- theme ->  Adwaita-dark
+- cursor -> Adwaita-default
 
 ```
-The default font setting is :
-    Ubuntu/11, Ubuntu Regular/11, Sans Regular/11, Ubuntu Mono Regular/13
-    the extra options are the third selection and first selection, and the zoom ratio is 1.0
-then I set 1-3 font family to Ubuntu Medium and 4 to Ubuntu Mono Bold with zoom ratio 1.3
+The default font family are :
+    Ubuntu/11, Ubuntu Regular/11, Sans Regular/11, Ubuntu Mono Regular/13.
+then I set 1-3 font family to Ubuntu Medium and 4 to Ubuntu Mono Bold with the same font-szie but zoom ratio is 1.3.
 ```
+
 
 **8.5 other useful tools and settings**
 
