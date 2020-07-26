@@ -237,7 +237,7 @@ then, go to Settings
  Now we finished all stuff. The default change-key is the single click of 'Shift'.
 ```
 
-Note: the above three parts are not the same thing, please set them one by one. And always remember to reboot the system or you maybe can't see the additions.
+Note: the above three parts are not the same thing, please set them one by one. And always remember to reboot the system or you maybe can't see the additions. If you think the panel of SogouPinyin is too small to watch, then you can modify it in its settings.
 
 With Chinese support, we can then set more slight changes with Tweaks (screenshot: http://i.imgur.com/l5sLZwZ.png).
 
