@@ -12,21 +12,21 @@ This doc includes two parts of [Installations](https://tianzonglin.github.io/Ubu
 
 ### 1. install the system
 
-**1.1 prepare a USB installer (with another computer).** 
+#### 1.1 prepare a USB installer (with another computer)
 
 Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
 
-**1.2 turn off the secure boot in BIOS**
+#### 1.2 turn off the secure boot in BIOS
 
-**1.3 follow and finish the standard installation process.** 
+#### 1.3 follow and finish the standard installation process
 
 Note: do NOT set grub (eg. nomodeset) if you can install smoothly. After setting ubuntu's configuration, you can log into the new Ubuntu system (now, with the core graphics card and drivers)
 
-**1.4 agree the 1st time update require.** 
+#### 1.4 agree the 1st time update require, then reboot
 
 Note: when you first get into the Ubunutu, you may get a piece of update information, DO agree that, the principle is that we agree with all updates during the process of installation, but after we get a stable and complete system, then we stop update anything, try to keep the system having no change, if not, there might be some conflict between the new updates and the old drivers. 
 
-**1.5 reboot**
+
 
 ### 2. install nvidia dirver
  
