@@ -2,7 +2,7 @@
 
 ## Full steps of Ubuntu installation (with GL stuff)
 
-This doc includes two parts of [Installations](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/Installations.md) and [PersonalSettings](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/PersonalSettings.md).
+This doc includes two parts of [Installations](https://tianzonglin.github.io/Ubuntu-Installog/Installations.html) and [PersonalSettings](https://tianzonglin.github.io/Ubuntu-Installog/PersonalSettings.html).
 
 ### 0. laptop info
 
