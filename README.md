@@ -1,5 +1,7 @@
 ![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/fjdsuiohoviwe23424.png)
 
+[TOC]
+
 ## Full steps of Ubuntu installation (with GL stuff)
 
 This doc includes two parts of [Installations](https://tianzonglin.github.io/Ubuntu-Installog/Installations.html) and [PersonalSettings](https://tianzonglin.github.io/Ubuntu-Installog/PersonalSettings.html).
