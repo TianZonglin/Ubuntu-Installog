@@ -68,7 +68,9 @@ $ sudo chmod 777 cuda-10_\*.run
 $ sudo sh cuda-10_\*.run
 ```
 
-**3.3 during this process.** Note: we have installed the driver by ourselves, so here say no. 
+**3.3 during this process.** 
+
+Note: we have installed the driver by ourselves, so here say no. 
 
 ```
 Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
@@ -118,7 +120,9 @@ sudo apt install libglu1-mesa-dev freeglut3-dev
 libglfw3-dev libgles2-mesa-dev libglew-dev 
 ```
 
-**4.4 just use all-in-one command.** Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
+**4.4 just use all-in-one command.** 
+
+Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
 
 ```
 $ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev libglew-dev 
