@@ -30,7 +30,7 @@ Note: when you first get into the Ubunutu, you may get a piece of update informa
 
 ### 2. install nvidia dirver
  
-**2.1 add repository then we can check devices.** 
+#### 2.1 add repository then we can check devices
 
 Note：we get the recommendation version here！
 
@@ -40,7 +40,7 @@ $ sudo apt-get update
 $ sudo ubuntu-drivers devices
 ```
 
-**2.2 install drivers in APP** (Software and Updates)
+#### 2.2 install drivers in APP (Software and Updates)
 
 ```
 Software and Updates ->
@@ -49,7 +49,7 @@ Software and Updates ->
             apply
 ```
 
-**2.3 do NOT set blacklist of nouveau or set grub.** 
+#### 2.3 do NOT set blacklist of nouveau or set grub.
 
 Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with Nvidia drivers!
 
@@ -57,18 +57,18 @@ Now, the installation of the Nvidia driver was finished. You can use `nvidia-smi
  
 ### 3. install cuda-toolkit
 
-**3.1 select cuda-10_\* or another version** (here I select 10.0)
+#### 3.1 select cuda-10_\* or another version (here I select 10.0)
 
 (sreenshot:http://i.imgur.com/6xPtxju.png)
 
-**3.2 execute**
+#### 3.2 execute
 
 ```
 $ sudo chmod 777 cuda-10_\*.run
 $ sudo sh cuda-10_\*.run
 ```
 
-**3.3 during this process.** 
+#### type NO in the process
 
 Note: we have installed the driver by ourselves, so here say no. 
 
@@ -77,7 +77,7 @@ Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
 (y)es/(n)o/(q)uit: n
 ```
 
-**3.4 test samples**
+#### 3.4 test samples
  
 ```
 $ cd /usr/local/cuda/samples
@@ -89,7 +89,7 @@ $ ./deviceQuery
 
 (sreenshot:http://i.imgur.com/jJ7vpNw.png)
  
-**3.5 extra IMPORTANT config.** 
+#### 3.5 extra IMPORTANT config
 
 Note: add two environment params into /etc/profile, if not, maybe you could get the error says: libcudart.so.10.0: cannot open shared object file: No such file or directory
 
@@ -102,25 +102,25 @@ Now cuda installation is finished, actually, with samples' test, we can also mak
 
 ### 4. install GL stuff
 
-**4.1 for GL/gl.h use:**
+#### 4.1 for GL/gl.h use:**
 
 ```
 sudo apt install mesa-common-dev
 ```
 
-**4.2 GL/glu.h:**
+#### 4.2 GL/glu.h:**
 
 ```
 sudo apt install libglu1-mesa-dev freeglut3-dev
 ```
 
-**4.3 others:**
+#### 4.3 others:**
 
 ```
 libglfw3-dev libgles2-mesa-dev libglew-dev 
 ```
 
-**4.4 just use all-in-one command.** 
+#### 4.4 just use all-in-one command.** 
 
 Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
 
@@ -130,14 +130,14 @@ $ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev 
 
 ### 5. install project stuff
 
-**5.1 base tools**
+#### 5.1 base tools
 
 ```
 $ sudo apt install vim
 $ sudo apt install cmake
 ```
 
-**5.2 rebuild project**
+#### 5.2 rebuild project
 
 ```
 $ cd ProjectionExplain/LIBRARY/glui-master
@@ -157,14 +157,14 @@ All stuff about GL-project has been done!
 
 ### 6. install personal software
 
-**6.1 screenshot: flameshot**
+#### 6.1 screenshot: flameshot
 
 use `sudo apt-get install flameshot`
 
 set the shortcut
  (sreenshot:http://i.imgur.com/id2PPYj.png)
 
-**6.2 vscode**
+#### 6.2 vscode
 
 **..more settings could be found in chapter 8.5..**
 
@@ -179,7 +179,7 @@ then, we can program code with vsc
 
 ### 7. change the theme with Tweaks
 
-**7.1 install tweaks and its extensions**
+#### 7.1 install tweaks and its extensions
 
 ```
 $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gnome-tweaks adwaita-icon-theme-full
@@ -187,25 +187,25 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 then logout and login system or reboot.
 
-**7.2 change panel style** 
+#### 7.2 change panel style
 
 (extensions: dash to panel) Note: with right-click, you can wake the panel-setting window, and some slight changes could be made in here.
  (sreenshot:http://i.imgur.com/OKrQ67r.png)
  
-**7.3 change menu style** 
+#### 7.3 change menu style
 
 (extension: applications menu) Note: turn on this extension could display the app manager like windows starting menu. Here I just changed the margin of the application and hide the application's icon and show the desktop's button (like windows).
 
-**7.4 change the wallpaper**
+#### 7.4 change the wallpaper
 
 Till now, the basic theme set has been finished, and the style now is very similar to my windows desktop. 
 
 
 ### 8. unimportant changes
  
-**8.1 add support of Chinese** 
+#### 8.1 add support of Chinese
 
-- add extra language in the system
+- **add extra language in the system**
 
 ```
 Go to Settings 
@@ -221,11 +221,11 @@ Go to Settings
 
 Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Downloads, Pictures, Videos, then I suggest that let the system keep the old/English name, cause Chinese characters could be hard to use in terminal or code. 
 
-- install SogouPinyin
+- **install SogouPinyin**
 
 Note:  Download the package from Browser, [Linux_64-bit.deb.](https://pinyin.sogou.com/linux/?r=pinyin) Then, just click the deb file and click 'install'. If you use an old Ubuntu version, just follow [this page](https://pinyin.sogou.com/linux/help.php). After that, you also need to reboot the system.
  
-- install fcitx and change the input source to SogouPinyin
+- **install fcitx and change the input source to SogouPinyin**
 
 ```
 $ sudo apt install fcitx
@@ -246,7 +246,7 @@ Note: the above three parts are not the same thing, please set them one by one. 
 With Chinese support, we can then set more slight changes with Tweaks (screenshot: http://i.imgur.com/l5sLZwZ.png).
 
 
-**8.2 change screen resolution** 
+#### 8.2 change screen resolution
 
 - connect high-resolution (second) screen 
 - make a command set with xrandr of high-resolution configuration, like 2k. There are 3 commands we can put them in \*.sh file,  the 3rd line is to use xrandr to set primary monitor and turn off the laptop's screen. 
@@ -277,7 +277,7 @@ quick way :
 Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change.
   
 
-**8.3 add support of Windows software** 
+#### 8.3 add support of Windows software
 
 like tencent qq, or redalert2, or other applications.
 
@@ -322,7 +322,7 @@ $ sudo cp /home/tzloop/Downloads/QQ.desktop ~/.local/share/applications
 ```
 
 
-**8.4 some unessential changes with Tweaks**
+#### 8.4 some unessential changes with Tweaks
 
 - theme ->  Adwaita-dark
 - cursor -> Adwaita-default
@@ -333,9 +333,9 @@ The default font family  (4 items) are :
 then I set 1-3's font family to Ubuntu Medium with the same font-szie but zoom ratio is 1.3.
 ```
 
-**8.5 other useful tools and settings**
+#### 8.5 other useful tools and settings
 
-**8.5.1 brightness control**
+##### 8.5.1 brightness control
 
 I use RedShift here, other similar software like F.lux is good as well. Using RedShift is simple:
 
@@ -347,7 +347,7 @@ I use RedShift here, other similar software like F.lux is good as well. Using Re
 -> finally, with its menu, you can set it open with your system.
 ```
  
-**8.5.2 vscode preferances**
+##### 8.5.2 vscode preferances
  
  @theme
  
@@ -393,7 +393,7 @@ Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's u
  
 The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com/g7OehEL.png)
  
-**8.5.3 install and set git**
+##### 8.5.3 install and set git
 
 - install
 - set and use with vscode (target: github)
@@ -402,12 +402,12 @@ The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com
  
 ### X. Ubuntu Using Tips
 
-**X.1 updates.** 
+#### X.1 updates
 
 just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', or you would get errors when you install new packages/tools/...
  (sreenshot:http://i.imgur.com/w7Kvc7X.png)
 
-**X.2 when desktop crash.** 
+#### X.2 when desktop crash
 
 like stucking when turning off some windows or stucking after running something for a long time. When this happened, do NOT shut down the system by cut down the power! that's a dangerous behavior, system core may be ruined by this.
 
