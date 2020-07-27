@@ -46,7 +46,7 @@
     + [X.1 updates](#x1-updates)
     + [X.2 when desktop crash](#x2-when-desktop-crash)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+Table of content generated with [markdown-toc.](http://ecotrust-canada.github.io/markdown-toc/)
 
 
 ## Full steps of Ubuntu installation (with GL stuff)
@@ -151,25 +151,25 @@ Now cuda installation is finished, actually, with samples' test, we can also mak
 
 ### 4. install GL stuff
 
-#### 4.1 for GL/gl.h use:**
+#### 4.1 for GL/gl.h use
 
 ```
 sudo apt install mesa-common-dev
 ```
 
-#### 4.2 GL/glu.h:**
+#### 4.2 GL/glu.h
 
 ```
 sudo apt install libglu1-mesa-dev freeglut3-dev
 ```
 
-#### 4.3 others:**
+#### 4.3 others
 
 ```
 libglfw3-dev libgles2-mesa-dev libglew-dev 
 ```
 
-#### 4.4 just use all-in-one command.** 
+#### 4.4 just use all-in-one command
 
 Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
 
