@@ -280,27 +280,14 @@ like tencent qq, or redalert2, or other applications.
 - method-1: install wine from Ubuntu-Software, then install windows apps with wine. With this, we could paly redalert2 or chat with windows-qq in ubuntu.
 - method-2: install an android simulator, I highly recommend this one ([download link](https://www.linzhuotech.com/index.php/home/index/download.html)), it's stable and fast and could give us the same using-experience of the android pad, if you just want to use qq or wechat in ubuntu, you need to try this. (screenshot: https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/Cache_32799f853a0e21fe..jpg)
 
-Note: 
+Note:  I found a quick way to use the wine qq in Ubuntu, even you DON'T need to install wine. To do this, you need to go to this Github page and download the \*.AppImage file from its release. Then, just use two commands to run it. That's all. this appimage includes a minimum wine inside and you just do nothing, download then use it! 
 
 ```
-sudo apt install wine-stable
-sudo wget http://ttttttest222333.oss-cn-beijing.aliyuncs.com/wineqq_1.0-1_all.deb
-sudo dpkg -i wineqq_1.0-1_all.deb
+$ chmod a+x TIM-x86_64.AppImage
+$ ./TIM-x86_64.AppImage.AppImage
 ```
 
-Now you can find WineQQ in 'Applications', the default fonts is  ugly, so we need to change it (use msyh.ttc insteadly). Firstly, we need to intall this font. 
-
-```
-sudo mkdir /usr/share/fonts/windows
-cd /usr/share/fonts/windows/
-sudo wget https://github.com/owent-utils/font/raw/master/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91/MSYH.TTC
-fc-cache
-$ regedit             //open wine regedit
-```
-
-Here you could see a window like Windows' regedit, open this path `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink` you can find three lines in the right area, then add `MSYH.TTC,Microsoft YaHei` into these three items, finally, reboot the system.
-
-
+(In my machine, the appimage of QQ can't work well with some problems about showing characters, so I just use TIM instead.)
 
 **8.4 some unessential changes with Tweaks**
 
