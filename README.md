@@ -205,7 +205,7 @@ Till now, the basic theme set has been finished, and the style now is very simil
  
 **8.1 add support of Chinese** 
 
-1. add extra language in the system
+- add extra language in the system
 
 ```
 Go to Settings 
@@ -221,11 +221,11 @@ Go to Settings
 
 Note: After reboot, System now could be displayed by Chinese.  If you get the message about 'change public folder names' like Downloads, Pictures, Videos, then I suggest that let the system keep the old/English name, cause Chinese characters could be hard to use in terminal or code. 
 
-2. install SogouPinyin
+- install SogouPinyin
 
 Note:  Download the package from Browser, [Linux_64-bit.deb.](https://pinyin.sogou.com/linux/?r=pinyin) Then, just click the deb file and click 'install'. If you use an old Ubuntu version, just follow [this page](https://pinyin.sogou.com/linux/help.php). After that, you also need to reboot the system.
  
-3. install fcitx and change the input source to SogouPinyin
+- install fcitx and change the input source to SogouPinyin
 
 ```
 $ sudo apt install fcitx
