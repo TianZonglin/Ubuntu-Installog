@@ -293,7 +293,7 @@ then I set 1-3's font family to Ubuntu Medium with the same font-szie but zoom r
 
 **8.5 other useful tools and settings**
 
-- **brightness control**
+**8.5.1 brightness control**
 
 I use RedShift here, other similar software like F.lux is good as well. Using RedShift is simple:
 
@@ -305,7 +305,7 @@ I use RedShift here, other similar software like F.lux is good as well. Using Re
 -> finally, with its menu, you can set it open with your system.
 ```
  
- - **vscode preferances**
+**8.5.2 vscode preferances**
  
  @theme
  
@@ -350,6 +350,13 @@ Just search 'location' in settings and change `Workbench › Panel: Default Loca
 Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's useful for some make/cmake projects, which has a lot of \*.cpp or \*.o files, they're mixed with the default setting, but it should be sorted by type so that we can have a clear group of different files.
  
 The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com/g7OehEL.png)
+ 
+**8.5.3 install and set git**
+
+- install
+- set and use with vscode (target: github)
+ 
+ 
  
 ### X. Ubuntu Using Tips
 
