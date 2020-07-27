@@ -273,7 +273,7 @@ quick way :
 Note: the original system doesn't support higher resolution more than 1080, so we need to add new resolution and trigger the change.
   
 
-**8.3 add support of specific software** 
+**8.3 add support of Windows software** 
 
 like tencent qq, or redalert2, or other applications.
 
@@ -288,6 +288,28 @@ $ ./TIM-x86_64.AppImage.AppImage
 ```
 
 (In my machine, the appimage of QQ can't work well with some problems about showing characters, so I just use TIM instead.)
+
+If you want to open it by icons, then you can make a \*.desktop file by yourself, then put this file into `~/.local/share/applications`, after that, you can find your desktop icon in 'applications' (search it), right-click and add it to the favorite, then, you will find your own desktop icon appears in the dock.
+
+```
+// 1st, get qq.png and make your own desktop file (any path is ok, mine is Downloads/)
+$ wget https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/qq.png
+$ vim QQ.desktop
+
+// 2nd, copy the content, save and quit
+[Desktop Entry]
+Name=QQ
+Exec=/home/tzloop/Downloads/TIM-x86_64.AppImage
+Icon=/home/tzloop/Downloads/qq.png
+Type=Application
+StartupNotify=true
+
+// then, right-click the file, in permission page -> allow it execute as application
+
+// finally, copy it to your system applications' folder
+$ sudo cp /home/tzloop/Downloads/QQ.desktop ~/.local/share/applications
+```
+
 
 **8.4 some unessential changes with Tweaks**
 
