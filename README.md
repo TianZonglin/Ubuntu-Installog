@@ -274,7 +274,7 @@ Open Tweaks -> Extensions
                   -> turn off 'cancel applications' group'
 ```
 
-Till now, the basic theme set has been finished, and the style now is very similar (98%) to the  Windows desktop.  (screenshot: [http://i.imgur.com/y7safc9.png](2020-07-2823849238944.png))
+Till now, the basic theme set has been finished, and the style now is very similar (98%) to the  Windows desktop.  (screenshot: [http://i.imgur.com/y7safc9.png](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-2823849238944.png))
 
 
 ### 8. unimportant changes
