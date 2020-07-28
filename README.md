@@ -492,7 +492,16 @@ Then, right-click the file, in permission page -> allow it execute as applicatio
 Finally, copy it to your system applications' folder.
 ```
 
-If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip.
+If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
+
+```
+repository name -> TianZonglin/tuchuang
+branch name -> master
+token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
+storage path -> img/
+custom domain name -> https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang
+```
+
  
 ##### 8.5.4 install and set git
 
