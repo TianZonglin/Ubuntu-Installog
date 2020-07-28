@@ -204,3 +204,17 @@ then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
 
+ 
+### X. Ubuntu Using Tips
+
+#### X.1 updates
+
+just delay the update checking (I don't know how to stop it)! do NOT cancel the 'update from', or you would get errors when you install new packages/tools/...
+ (screenshot:[http://i.imgur.com/w7Kvc7X.png](http://i.imgur.com/w7Kvc7X.png))
+
+#### X.2 when desktop crash
+
+like stucking when turning off some windows or stucking after running something for a long time. When this happened, do NOT shut down the system by cut down the power! that's a dangerous behavior, system core may be ruined by this.
+
+the right way is: Ctrl+Alt+F2/3/4, log into the tty2/3/4, then restart gdm/lightdm, or rollback the wrong options here if you remember. Or do nothing, just wait for the system rerun again, sometimes it could be reworked after waiting a while.
+
