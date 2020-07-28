@@ -1,4 +1,6 @@
-![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-2823849238944.png)
+![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-2888888888.png)
+
+<!--23849238944.png-->
 
 ## Full steps of Ubuntu installation (with GL stuff)
 
