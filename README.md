@@ -42,7 +42,8 @@
   * [8.5 other useful tools and settings](#85-other-useful-tools-and-settings)
     + [8.5.1 brightness control](#851-brightness-control)
     + [8.5.2 vscode preferances](#852-vscode-preferances)
-    + [8.5.3 install and set git](#853-install-and-set-git)
+    + [8.5.3 picgo](#853-picgo)
+    + [8.5.4 install and set git](#854-install-and-set-git)
 - [X. Ubuntu Using Tips](#x-ubuntu-using-tips)
   * [X.1 updates](#x1-updates)
   * [X.2 when desktop crash](#x2-when-desktop-crash)
@@ -440,7 +441,32 @@ Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's u
  
 The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com/g7OehEL.png)
  
-##### 8.5.3 install and set git
+ ##### 8.5.3 picgo
+ 
+Everytime you want to share or publish your screenshot or othem images, then try to use PicGo. It's a useful tool that includes many kind of image-bed, the usage of it in Ubuntu is similar to the  wine qq.
+ 
+ ```
+Firstly, get picgo.png and make your own desktop file (any path is ok, mine is Downloads/)
+
+$ wget https://raw.githubusercontent.com/TianZonglin/tuchuang/master/img/opic.png
+$ vim QQ.desktop
+
+Secondly, copy the content, save and quit.
+
+[Desktop Entry]
+Name=PicGO
+Exec=/home/tzloop/Downloads/PicGo.AppImage
+Icon=/home/tzloop/Downloads/opic.png
+Type=Application
+StartupNotify=true
+
+Then, right-click the file, in permission page -> allow it execute as application
+Finally, copy it to your system applications' folder.
+```
+
+If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip.
+ 
+##### 8.5.4 install and set git
 
 - install
 - set and use with vscode (target: github)
