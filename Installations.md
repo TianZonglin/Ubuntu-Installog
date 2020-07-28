@@ -2,16 +2,16 @@
 
 - [0. laptop info](#0-laptop-info)
 - [1. install the system](#1-install-the-system)
-  * [1.1 prepare a USB installer (with another computer)](#11-prepare-a-usb-installer--with-another-computer-)
+  * [1.1 prepare a USB installer - with another computer](#11-prepare-a-usb-installer---with-another-computer)
   * [1.2 turn off the secure boot in BIOS](#12-turn-off-the-secure-boot-in-bios)
   * [1.3 follow and finish the standard installation process](#13-follow-and-finish-the-standard-installation-process)
   * [1.4 agree the 1st time update require, then reboot](#14-agree-the-1st-time-update-require--then-reboot)
 - [2. install nvidia dirver](#2-install-nvidia-dirver)
   * [2.1 add repository then we can check devices](#21-add-repository-then-we-can-check-devices)
-  * [2.2 install drivers in APP (Software and Updates)](#22-install-drivers-in-app--software-and-updates-)
+  * [2.2 install drivers in APP - Software and Updates](#22-install-drivers-in-app---software-and-updates)
   * [2.3 do NOT set blacklist of nouveau or set grub.](#23-do-not-set-blacklist-of-nouveau-or-set-grub)
 - [3. install cuda-toolkit](#3-install-cuda-toolkit)
-  * [3.1 select cuda-10_\* or another version (here I select 10.0)](#31-select-cuda-10----or-another-version--here-i-select-100-)
+  * [3.1 select cuda-10_\* or another version](#31-select-cuda-10----or-another-version)
   * [3.2 execute](#32-execute)
   * [type NO in the process](#type-no-in-the-process)
   * [3.4 test samples](#34-test-samples)
@@ -41,7 +41,7 @@
 
 ### 1. install the system
 
-#### 1.1 prepare a USB installer (with another computer)
+#### 1.1 prepare a USB installer - with another computer
 
 Note: official iso ([ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso))
 
@@ -69,7 +69,7 @@ $ sudo apt-get update
 $ sudo ubuntu-drivers devices
 ```
 
-#### 2.2 install drivers in APP (Software and Updates)
+#### 2.2 install drivers in APP - Software and Updates
 
 ```
 Software and Updates ->
@@ -82,13 +82,13 @@ Software and Updates ->
 
 Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with Nvidia drivers!
 
-Now, the installation of the Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok (sreenshot:http://i.imgur.com/GgfSqCM.png) or just check the system information and see the drivers name. (sreenshot:http://i.imgur.com/Euj6tQy.png)
+Now, the installation of the Nvidia driver was finished. You can use `nvidia-smi` to test if it's ok (screenshot:http://i.imgur.com/GgfSqCM.png) or just check the system information and see the drivers name. (screenshot: [http://i.imgur.com/Euj6tQy.png](http://i.imgur.com/Euj6tQy.png))
  
 ### 3. install cuda-toolkit
 
-#### 3.1 select cuda-10_\* or another version (here I select 10.0)
+#### 3.1 select cuda-10_\* or another version 
 
-(sreenshot:http://i.imgur.com/6xPtxju.png)
+(screenshot: [http://i.imgur.com/6xPtxju.png](http://i.imgur.com/6xPtxju.png))
 
 #### 3.2 execute
 
@@ -116,7 +116,7 @@ $ cd /usr/local/cuda/samples/bin/x86_64/linux/release
 $ ./deviceQuery
 ```
 
-(sreenshot:http://i.imgur.com/jJ7vpNw.png)
+(screenshot: [http://i.imgur.com/jJ7vpNw.png](http://i.imgur.com/jJ7vpNw.png))
  
 #### 3.5 extra IMPORTANT config
 
@@ -182,7 +182,7 @@ $ ./projwiz -f DATA/segmentation lamp
 ```
 
 All stuff about GL-project has been done!
- (sreenshot:http://i.imgur.com/rDCtEId.png)
+ (screenshot: [http://i.imgur.com/rDCtEId.png](http://i.imgur.com/rDCtEId.png))
 
 ### 6. install personal software
 
@@ -191,15 +191,16 @@ All stuff about GL-project has been done!
 use `sudo apt-get install flameshot`
 
 set the shortcut
- (sreenshot:http://i.imgur.com/id2PPYj.png)
+ (screenshot: [http://i.imgur.com/id2PPYj.png](http://i.imgur.com/id2PPYj.png))
 
 #### 6.2 vscode
 
 **..more settings could be found in chapter 8.5..**
 
 install it directly in APP (Ubuntu Software).
- (sreenshot:http://i.imgur.com/W971ERc.png)
+ (screenshot: [http://i.imgur.com/W971ERc.png](http://i.imgur.com/W971ERc.png))
 
 then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
+
