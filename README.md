@@ -1,4 +1,4 @@
-![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/fjdsuiohoviwe23424.png)
+![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-28%2019-16-53%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
 ## Full steps of Ubuntu installation (with GL stuff)
 
@@ -31,9 +31,9 @@
   * [6.2 vscode](#62-vscode)
 - [7. change the theme with Tweaks](#7-change-the-theme-with-tweaks)
   * [7.1 install tweaks and its extensions](#71-install-tweaks-and-its-extensions)
-  * [7.2 change panel style](#72-change-panel-style)
-  * [7.3 change menu style](#73-change-menu-style)
-  * [7.4 change the wallpaper](#74-change-the-wallpaper)
+  * [7.2 change menu style](#72-change-menu-style)
+  * [7.3 change the wallpaper](#73change-the-wallpaper)
+  * [7.4 change the panel and put icons on the desktop](#74-change-the-panel-and-put-icons-on-the-desktop)
 - [8. unimportant changes](#8-unimportant-changes)
   * [8.1 add support of Chinese](#81-add-support-of-chinese)
   * [8.2 change screen resolution](#82-change-screen-resolution)
@@ -234,19 +234,47 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 ```
 
 then logout and login system or reboot.
-
-#### 7.2 change panel style
-
-(extensions: dash to panel) Note: with right-click, you can wake the panel-setting window, and some slight changes could be made in here.
- (screenshot: [http://i.imgur.com/OKrQ67r.png](http://i.imgur.com/OKrQ67r.png))
  
-#### 7.3 change menu style
+#### 7.2 change menu style
 
 (extension: applications menu) Note: turn on this extension could display the app manager like windows starting menu. Here I just changed the margin of the application and hide the application's icon and show the desktop's button (like windows).
 
-#### 7.4 change the wallpaper
+#### 7.3 change the wallpaper
 
-Till now, the basic theme set has been finished, and the style now is very similar to my windows desktop. 
+#### 7.4 change the panel and put icons on the desktop
+
+The default style of the dock is not same as Windows, and the desktop is not very important while using Ubuntu, but here the idea is to change Ubuntu looks like Windows in every detailed area, so here, we still need to do two things: put icons onto the desktop and change the original style of dock.
+
+There are several paths that could include installed applications, which means we need to go to different folders to find those icons. The paths below are some possible locations you need to check. Then just drag out and put the icon onto the desktop. You will see these icons become files like \*.desktop, don't worry, just double-click them and click 'Trust and Launch', then they could change back to the normal icons.
+
+```
+/usr/share/applications
+/var/lib/snapd/desktop/applications
+~/.local/share/applications
+```
+
+Then we need to use Tweaks to change the panel/dock. 
+
+```
+Open Tweaks -> Extensions 
+      -> turn on the 'applications menu' 
+      -> turn on the 'Dash to panel' -> open settings
+            -> Location and Style
+                  -> panel location -> bottom
+                  -> panel size -> 45px
+                  -> icons margin -> 5px
+                  -> indicator -> open settings
+                        -> height -> 0px (we hide it by this)
+                  -> clock location -> right
+                  -> task panels -> left
+            -> Behaviors
+                  -> turn off 'favoriate applications'
+                  -> turn off 'applications icon'
+                  -> turn on 'show desktop'
+                  -> turn off 'cancel applications' group'
+```
+
+Till now, the basic theme set has been finished, and the style now is very similar (98%) to the  Windows desktop.  (screenshot: [http://i.imgur.com/y7safc9.png](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-28%2019-16-53%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png))
 
 
 ### 8. unimportant changes
