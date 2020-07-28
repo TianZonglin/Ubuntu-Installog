@@ -17,7 +17,7 @@
 - [3. install cuda-toolkit](#3-install-cuda-toolkit)
   * [3.1 select cuda-10_\* or another version](#31-select-cuda-10----or-another-version)
   * [3.2 execute](#32-execute)
-  * [type NO in the process](#type-no-in-the-process)
+  * [3.3 type NO in the process](#33-type-no-in-the-process)
   * [3.4 test samples](#34-test-samples)
   * [3.5 extra IMPORTANT config](#35-extra-important-config)
 - [4. install GL stuff](#4-install-gl-stuff)
@@ -118,7 +118,7 @@ $ sudo chmod 777 cuda-10_\*.run
 $ sudo sh cuda-10_\*.run
 ```
 
-#### type NO in the process
+#### 3.3 type NO in the process
 
 Note: we have installed the driver by ourselves, so here say no. 
 
