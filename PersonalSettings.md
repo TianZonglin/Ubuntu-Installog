@@ -32,7 +32,7 @@ then logout and login system or reboot.
 #### 7.2 change panel style
 
 (extensions: dash to panel) Note: with right-click, you can wake the panel-setting window, and some slight changes could be made in here.
- (sreenshot:http://i.imgur.com/OKrQ67r.png)
+ (screenshot: [http://i.imgur.com/OKrQ67r.png](http://i.imgur.com/OKrQ67r.png))
  
 #### 7.3 change menu style
 
@@ -85,7 +85,7 @@ then, go to Settings
 
 Note: the above three parts are not the same thing, please set them one by one. And always remember to reboot the system or you maybe can't see the additions. If you think the panel of SogouPinyin is too small to watch, then you can modify it in its settings.
 
-With Chinese support, we can then set more slight changes with Tweaks (screenshot: http://i.imgur.com/l5sLZwZ.png).
+With Chinese support, we can then set more slight changes with Tweaks (screenshot: [http://i.imgur.com/l5sLZwZ.png](http://i.imgur.com/l5sLZwZ.png)).
 
 
 #### 8.2 change screen resolution
@@ -124,7 +124,7 @@ Note: the original system doesn't support higher resolution more than 1080, so w
 like tencent qq, or redalert2, or other applications.
 
 - method-1: install wine from Ubuntu-Software, then install windows apps with wine. With this, we could paly redalert2 or chat with windows-qq in ubuntu.
-- method-2: install an android simulator, I highly recommend this one ([download link](https://www.linzhuotech.com/index.php/home/index/download.html)), it's stable and fast and could give us the same using-experience of the android pad, if you just want to use qq or wechat in ubuntu, you need to try this. (screenshot: https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/Cache_32799f853a0e21fe..jpg)
+- method-2: install an android simulator, I highly recommend this one ([download link](https://www.linzhuotech.com/index.php/home/index/download.html)), it's stable and fast and could give us the same using-experience of the android pad, if you just want to use qq or wechat in ubuntu, you need to try this. (screenshot: [https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/Cache_32799f853a0e21fe..jpg](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/Cache_32799f853a0e21fe..jpg))
 
 Note:  I found a quick way to use the wine qq in Ubuntu, even you DON'T need to install wine. To do this, you need to go to this Github page and download the \*.AppImage file from its release. Then, just use two commands to run it. That's all. this appimage includes a minimum wine inside and you just do nothing, download then use it! 
 
@@ -233,7 +233,7 @@ Just search 'location' in settings and change `Workbench › Panel: Default Loca
  
 Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's useful for some make/cmake projects, which has a lot of \*.cpp or \*.o files, they're mixed with the default setting, but it should be sorted by type so that we can have a clear group of different files.
  
-The final view of vscode in my Ubuntu like this: (screenshot: http://i.imgur.com/g7OehEL.png)
+The final view of vscode in my Ubuntu like this: (screenshot: [http://i.imgur.com/g7OehEL.png](http://i.imgur.com/g7OehEL.png))
  
  ##### 8.5.3 picgo
  
@@ -264,5 +264,4 @@ If you want to upload images by clipboard, you need to use `sudo apt install xcl
 
 - install
 - set and use with vscode (target: github)
- 
  
