@@ -167,7 +167,7 @@ sudo apt install libglu1-mesa-dev freeglut3-dev
 #### 4.3 others
 
 ```
-libglfw3-dev libgles2-mesa-dev libglew-dev 
+libglfw3-dev libgles2-mesa-dev libglew-dev libeigen3-dev
 ```
 
 #### 4.4 just use all-in-one command
@@ -175,7 +175,7 @@ libglfw3-dev libgles2-mesa-dev libglew-dev
 Note: they are all necessary to install, and maybe you need to install more libs, it's up to your code.
 
 ```
-$ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev libglew-dev 
+$ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev libglew-dev libeigen3-dev
 ```
 
 ### 5. install project stuff
