@@ -497,11 +497,11 @@ Finally, copy it to your system applications' folder.
 If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
 
 ```
-repository name -> TianZonglin/tuchuang
+repository name -> GITHUBACCOUNT/tuchuang
 branch name -> master
 token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
 storage path -> img/
-custom domain name -> https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang
+custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
 ```
 
  
