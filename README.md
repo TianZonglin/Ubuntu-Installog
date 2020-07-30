@@ -537,7 +537,7 @@ git commit -m "`date +%Y-%m-%d,%H:%m`"
 git push -u origin master -f
 ```
 
-Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically.
+Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically. Every time you want to back up your code, just run this sh file then backup done.
  
 ### X. Ubuntu Using Tips
 
