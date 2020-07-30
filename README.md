@@ -507,10 +507,37 @@ custom domain name -> https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang
  
 ##### 8.5.4 install and set git
 
-- install
-- set and use with vscode (target: github)
+- **settings**
+
+Just use `sudo apt install git` to install git, then, we can make some settings to let us push/pull the remote bucket with no need of password and username. 
+
+Note: I use Github to back up my project, these options are also worked for other git servers.
+
+```
+$ ssh-keygen -t rsa -C "YOUREMAIL"
+$ vim ~/.ssh/id_rsa.pub
+
+Then go Github -> Settings
+      -> SSH and GPG keys -> New SSH key
+You need to copy the content of rsa.pub to here. 
+
+$ git config --global user.name "YOURUSERNAME"
+$ git config --global user.email "YOUREMAIL"
+```
+
+Till now, we have finished the setting, and you could pull or push your code without username or password, but note that you must use SSH_URL to do these options.
  
- 
+- **use case** 
+
+Go to Github and create a new repository named by your project name. Then use `git clone git@xx.git` to pull it into your system. Lastly, move all your project files into this git folder, and run the commands:
+
+```
+git add -A
+git commit -m "`date +%Y-%m-%d,%H:%m`" 
+git push -u origin master -f
+```
+
+Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically.
  
 ### X. Ubuntu Using Tips
 
