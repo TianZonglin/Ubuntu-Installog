@@ -539,6 +539,14 @@ git push -u origin master -f
 
 Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically. Every time you want to back up your code, just run this sh file then backup done.
  
+ 
+ ##### 8.5.5 remote desktop
+ 
+I think a good remote application is very important for me and many other Ubuntu users. From my experience, I highly recommend the application named Anydesk, which is really easy to insatall and use. 
+
+To use it, just download the deb package from [here](https://anydesk.com/zhs/downloads/linux) and install it. Then, you can use it! No need to install extra packages or edit configurations.
+ 
+ 
 ### X. Ubuntu Using Tips
 
 #### X.1 updates
