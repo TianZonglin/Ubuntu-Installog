@@ -46,6 +46,7 @@
     + [8.5.2 vscode preferances](#852-vscode-preferances)
     + [8.5.3 picgo](#853-picgo)
     + [8.5.4 install and set git](#854-install-and-set-git)
+    + [8.5.5 remote desktop](#855-remote-desktop)
 - [X. Ubuntu Using Tips](#x-ubuntu-using-tips)
   * [X.1 updates](#x1-updates)
   * [X.2 when desktop crash](#x2-when-desktop-crash)
