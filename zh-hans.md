@@ -5,7 +5,7 @@
 
 这是一份完整的Ubuntu安装手册，可以帮助你快速初始化系统到可用状态，此手册包含两部分，包括Ubuntu系统的安装及配置、及GL相关开发环境的初始化。为了使行文更加清晰，文中插图全部以链接形式呈现，该手册仍然在完善中并已开源在Github。
 
-[英文版本](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/Installations.md)
+**[English Version](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/Installations.md)**
 
 **Go to [Github version](https://tianzonglin.github.io/Ubuntu-Installog)**
 <br>
@@ -61,25 +61,25 @@
 - CPU: intel i7-6700HQ，带核显
 - 单系统安装（ubuntu-18.04-LTS）
 
-### 1. 安装系统
+### **1. 安装系统**
 
-#### 1.1 准备USB启动盘
+#### **1.1 准备USB启动盘**
 
 注意：本文使用的官方镜像为 [ubuntu-18.04.4-desktop-amd64.iso](https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso)。
 
-#### 1.2 在BIOS中关闭 Secure Boot
+#### **1.2 在BIOS中关闭 Secure Boot**
 
-#### 1.3 按正常步骤安装完系统
+#### **1.3 按正常步骤安装完系统**
 
 注意：如果你可以正常走完安装流程进入桌面，那就**不需要**修改 grub 的任何信息（例如nomodeset）。正常情况下，安装完后拔出USB启动盘，应该可以顺利进入桌面（此时系统运行在核显驱动下）。
  
-#### 1.4 第一次进入桌面后更新系统，然后重启
+#### **1.4 第一次进入桌面后更新系统，然后重启**
 
 注意：当你第一次进入Ubuntu桌面时，可能会弹出系统及软件的更新，请同意更新，否则会影响后续操作。不过，当我们在安装完全部所需环境、软件之后，就不再需要更新了，尤其是尽量**不进行**系统级的更新，否则我们稍后安装的显卡驱动可能会因此出现异常。
  
-### 2. 安装英伟达驱动
+### **2. 安装英伟达驱动**
  
-#### 2.1 添加软件源并查看
+#### **2.1 添加软件源并查看**
 
 ```
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -89,7 +89,7 @@ $ sudo ubuntu-drivers devices
 
 注意：这里会输出你的机器适配的显卡驱动，并且会有一个 recommend 推荐项，我们稍后就安装这个推荐版本。
 
-#### 2.2 通过软件和更新直接安装
+#### **2.2 通过软件和更新直接安装**
 
 ```
 Software and Updates ->
@@ -100,29 +100,29 @@ Software and Updates ->
 
 注意：安装显卡驱动的方式有很多，较新版本的Ubuntu完全可以在“软件和更新”中直接进行显卡驱动的安装。无需下载安装文件，无需通过命令安装。
 
-#### 2.3 不要设置 nouveau 黑名单或者设置 grub 启动项
+#### **2.3 不要设置 nouveau 黑名单或者设置 grub 启动项**
 
 注意：使用此种方式安装显卡驱动，配置完全由系统完成，我们不用做任何设置。在‘软件与更新’内完成显卡安装后，重启系统。
 
-重启后进入桌面（此时正常情况下是会顺利启动的），此时用 `nvidia-smi` 可以测试显卡信息（screenshot:http://i.imgur.com/GgfSqCM.png），此外还可以直接通过系统信息来查看是否已加载英伟达显卡。（[http://i.imgur.com/Euj6tQy.png](http://i.imgur.com/Euj6tQy.png)）
-Note: all stuff could be handled automatically by system if we use this way to install the drivers, we do nothing then it would be worked very well with Nvidia drivers!
+重启后进入桌面（此时正常情况下是会顺利启动的），此时用 `nvidia-smi` 可以测试显卡信息，截图：[http://i.imgur.com/GgfSqCM.png](http://i.imgur.com/GgfSqCM.png)，此外还可以直接通过系统信息来查看是否已加载英伟达显卡，截图：[http://i.imgur.com/Euj6tQy.png](http://i.imgur.com/Euj6tQy.png)。
 
-### 3. 安装 cuda-toolkit
+
+### **3. 安装 cuda-toolkit**
 
 **（第3、4、5节和我自己的开发需求有关，一般使用可以跳过这几节！）**
 
-#### 3.1 选择版本，这里我用的 cuda-10_\*.run 
+#### **3.1 选择版本，这里我用的 cuda-10_\*.run** 
 
 （截图： [http://i.imgur.com/6xPtxju.png](http://i.imgur.com/6xPtxju.png)）
 
-#### 3.2 执行
+#### **3.2 执行**
 
 ```
 $ sudo chmod 777 cuda-10_\*.run
 $ sudo sh cuda-10_\*.run
 ```
 
-#### 3.3 跳过显卡安装
+#### **3.3 跳过显卡安装**
 
 注意：我们在前面已经安装过显卡了，这里务必要回答 NO。
 
@@ -131,7 +131,7 @@ Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
 (y)es/(n)o/(q)uit: n
 ```
 
-#### 3.4 测试 Samples
+#### **3.4 测试 Samples**
  
 ```
 $ cd /usr/local/cuda/samples
@@ -143,7 +143,7 @@ $ ./deviceQuery
 
 （截图： [http://i.imgur.com/jJ7vpNw.png](http://i.imgur.com/jJ7vpNw.png)）
  
-#### 3.5 其他重要的配置
+#### **3.5 其他重要的配置**
 
 注意：别忘了添加环境变量到 `/etc/profile`，如果不添加的话，后面使用Cuda会出现 `libcudart.so.10.0: cannot open shared object file: No such file or directory` 这种错误。
 
@@ -154,29 +154,29 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda/lib64/
 
 到此为止，英伟达显卡驱动和Cuda已经全部安装完毕。并且也通过测试来确保了安装的正确。
 
-### 4. 安装 GL 相关环境、库
+### **4. 安装 GL 相关环境、库**
 
 **（第3、4、5节和我自己的开发需求有关，一般使用可以跳过这几节！）**
 
-#### 4.1 GL/gl.h
+#### **4.1 GL/gl.h**
 
 ```
 sudo apt install mesa-common-dev
 ```
 
-#### 4.2 GL/glu.h
+#### **4.2 GL/glu.h**
 
 ```
 sudo apt install libglu1-mesa-dev freeglut3-dev
 ```
 
-#### 4.3 others
+#### **4.3 others**
 
 ```
 libglfw3-dev libgles2-mesa-dev libglew-dev libeigen3-dev
 ```
 
-#### 4.4 以上直接一次性安装
+#### **4.4 以上直接一次性安装**
 
 注意：这些库对我都是必须的，但这是取决于项目需求。
  
@@ -184,18 +184,18 @@ libglfw3-dev libgles2-mesa-dev libglew-dev libeigen3-dev
 $ sudo apt install mesa-common-dev freeglut3-dev libglfw3-dev libgles2-mesa-dev libglew-dev libeigen3-dev
 ```
 
-### 5. 安装项目所需软件并重构
+### **5. 安装项目所需软件并重构**
 
 **（第3、4、5节和我自己的开发需求有关，一般使用可以跳过这几节！）**
 
-#### 5.1 基础工具
+#### **5.1 基础工具**
 
 ```
 $ sudo apt install vim
 $ sudo apt install cmake
 ```
 
-#### 5.2 重新构建
+#### **5.2 重新构建**
 
 ```
 $ cd ProjectionExplain/LIBRARY/glui-master
@@ -213,13 +213,13 @@ $ ./projwiz -f DATA/segmentation lamp
 此时项目已经构建完毕并可以成功运行！
  （截图： [http://i.imgur.com/rDCtEId.png](http://i.imgur.com/rDCtEId.png)）
 
-### 6. 安装日程必备软件
+### **6. 安装日程必备软件**
 
-#### 6.1 截屏工具： flameshot
+#### **6.1 截屏工具： flameshot**
 
 使用 `sudo apt-get install flameshot` 完成安装，并如截图所示进行配置（截图： [http://i.imgur.com/id2PPYj.png](http://i.imgur.com/id2PPYj.png)）。
 
-#### 6.2 开发工具：vscode
+#### **6.2 开发工具：vscode**
 
 **..更多相关配置在 8.5 小节..**
 
@@ -232,9 +232,9 @@ $ ./projwiz -f DATA/segmentation lamp
 
 
 
-### 7. 使用 Tweaks 修改主题
+### **7. 使用 Tweaks 修改主题**
 
-#### 7.1 安装 Tweaks 及其扩展 extensions
+#### **7.1 安装 Tweaks 及其扩展 extensions**
 
 ```
 $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gnome-tweaks adwaita-icon-theme-full
@@ -242,23 +242,23 @@ $ sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gn
 
 在这之后需要注销或者重启生效。
  
-#### 7.2 更改顶部菜单栏样式
+#### **7.2 更改顶部菜单栏样式**
 
 扩展名称：applications menu。 
 注意：开启此扩展可以使应用菜单栏变得和Windows风格一致。扩展->设置内的选项都可能会被用到，可以自己探索一下。
 
-#### 7.3 修改壁纸
+#### **7.3 修改壁纸**
 
-#### 7.4 修改面板到底部，并把图标放到桌面
+#### **7.4 修改面板到底部，并把图标放到桌面**
 
 Ubuntu 的dock默认的风格更像是 OSX 系统，Tweaks允许我们修改其成为 Windows 风格（在底部）。另外，像Windows那样，我们把图标也放在桌面上。
 
 首先对 dock 样式进行修改：
 
 ```
-Open Tweaks -> Extensions 
-      -> turn on the 'applications menu' 
-      -> turn on the 'Dash to panel' -> open settings
+打开 Tweaks -> Extensions 
+      -> 打开 'applications menu' 
+      -> 打开 'Dash to panel' -> 打开设置
             -> Location and Style
                   -> panel location -> bottom
                   -> panel size -> 45px
@@ -268,10 +268,10 @@ Open Tweaks -> Extensions
                   -> clock location -> right
                   -> task panels -> left
             -> Behaviors
-                  -> turn off 'favoriate applications'
-                  -> turn off 'applications icon'
-                  -> turn on 'show desktop'
-                  -> turn off 'cancel applications' group'
+                  -> 关闭 'favoriate applications'
+                  -> 关闭 'applications icon'
+                  -> 打开 'show desktop'
+                  -> 关闭 'cancel applications' group'
 ```
 
 对于图标问题：
@@ -287,22 +287,22 @@ Ubuntu 默认的图标路径有好几个，下面是几个可能包含图标的�
 至此，基础的主题修改已经完成，目前为止，你的 Ubuntu 看起来应该非常接近 Windows 了。（截图： [http://i.imgur.com/y7safc9.png](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-2823849238944.png)）
 
 
-### 8. 不重要的配置
+### **8. 不重要的配置**
  
-#### 8.1 添加中文支持
+#### **8.1 添加中文支持**
 
 - **第一步给系统添加中文**
 
 ```
-Go to Settings 
+打开 Settings 
 -> Region & Languages
     -> manage installed language
-        -> if get the message of 'installed not complete' then just install
-            -> click 'Install/Remove Languages' 
-                -> choose Chinese then install (maybe need double-click)
-            -> then in 'Language for menu and windows' 
-                -> drag Chinese up to the 1st position
--> now in 'Region & Language', the Language has been changed to Chinese automatically.   
+        -> 如果弹出 'installed not complete'，那么先完成安装
+            -> 点击 'Install/Remove Languages' 
+                -> 选择 Chinese 然后安装（可能需要双击）
+            -> 然后在 'Language for menu and windows' 
+                -> 拖拽 Chinese 到排名第一的位置
+-> 现在在 'Region & Language'中，语言已经自动的变为中文了
 ```
 
 注意：上述操作完并重启后，系统才会变成中文。一般会弹出一个 'change public folder names' 询问弹框，就是问你要不要修改那几个公共文件夹的名字，强烈建议不要修改，即保持默认英文名称，这对于很多 bash 操作是很有利的。
@@ -315,16 +315,17 @@ Go to Settings
 
 ```
 $ sudo apt install fcitx
-then, go to Settings
-    -> manage  installed language
-        -> change the  'Input System'(default is IBus) to fictx
-        -> then click  'apply system-wild'
--> Now , you'd better to reboot, then
-    -> find 'keybord icon' in the task bar (default location is top-right corner)
-        -> click 'configure current input method'
-            -> then you could see SogouPinyin has been there. 
-                 We can delete that 'Wubi' so that we just keep English and Pinyin for us.
- Now we finished all stuff. The default change-key is the single click of 'Shift'.
+
+然后打开 Settings
+    -> manage installed language
+        -> 修改 'Input System'(默认是IBus) 为 fcitx
+        -> 然后点击 'apply system-wild'
+-> 现在最好是重启一次，然后
+    -> 在任务栏找到一个小键盘图标，
+        -> 点击'configure current input method'
+            -> 然后应该能发现搜狗输入法，还有些别的输入法
+                 我们可以删掉其余的输入法，只保留搜狗输入法和英文输出
+现在就完成全部输入法配置了，默认的切换键是 ‘单次Shift’
 ```
 
 注意：
@@ -332,7 +333,7 @@ then, go to Settings
 以上三部分是不同的，请一步步来，并且在过程中如果没发现新增项，请尝试重启系统。有了中文支持，我们可以进一步对 Tweaks 进行配置。 （截图： [http://i.imgur.com/l5sLZwZ.png](http://i.imgur.com/l5sLZwZ.png)）
 
 
-#### 8.2 更改副屏分辨率
+#### **8.2 更改副屏分辨率**
 
 - 连接你的副屏，我的副屏是2k屏，笔记本是1080的，所以输出分辨率最大只有1080，我们需要手动修改它；
 - 新建个 sh 文件，里面包含重置分辨率的命令，这样只需要每次重启后设置自动执行，即可自动变为2k的输出。 下面需要做些准备工作来确定最后写入 sh 文件的三行命令的参数。
@@ -363,7 +364,7 @@ quick way :
 注意：这样写的弊端在于，你必须保证2k副屏后再重启，如果你不用副屏了，你必须从 profile 里去掉这三行命令，否则会出错的。
   
 
-#### 8.3 添加一些未适配的应用
+#### **8.3 添加一些未适配的应用**
 
 像是微信、QQ等聊天工具，或者红警等游戏，对于这些软件，默认是没有支持的，但仍然可以通过一些方法安装。
 
@@ -411,7 +412,7 @@ $ sudo cp /home/tzloop/Downloads/QQ.desktop ~/.local/share/applications
 ```
 
 
-#### 8.4 Tweaks的一些不重要的美化设置
+#### **8.4 Tweaks的一些不重要的美化设置**
 
 - 主题 ->  Adwaita-dark
 - 指针 -> Adwaita-default
@@ -419,9 +420,9 @@ $ sudo cp /home/tzloop/Downloads/QQ.desktop ~/.local/share/applications
 字体设置，默认的字体及大小为 `Ubuntu/11, Ubuntu Regular/11, Sans Regular/11, Ubuntu Mono Regular/13`
 这里我把前三项设置为了 `Ubuntu Medium` 字号不变，然后把整体的 `zoom ratio` 设置为了 1.3.
 
-#### 8.5 其他实用的配置及软件
+#### **8.5 其他实用的配置及软件**
 
-##### 8.5.1 屏幕亮度控制
+##### **8.5.1 屏幕亮度控制**
 
 我使用 RedShift 软件来控制，相同的软件还有很多，像是 F.lux 等等也是很棒的。安装 RedShift 的步骤：
 
@@ -433,7 +434,7 @@ $ sudo cp /home/tzloop/Downloads/QQ.desktop ~/.local/share/applications
 -> finally, with its menu, you can set it open with your system.
 ```
  
-##### 8.5.2 Vscode配置
+##### **8.5.2 Vscode配置**
  
 **@主题**
  
@@ -481,7 +482,7 @@ $ fc-list
  
 最后修改完配置的Vscode截图长这样：[http://i.imgur.com/g7OehEL.png](http://i.imgur.com/g7OehEL.png)。
  
-##### 8.5.3 picgo
+##### **8.5.3 picgo**
  
 如果你希望方便的上传、分享你的截图或图片，那么一定要试试 PicGo，其在 Ubuntu 上的安装使用和之前的 TIM.AppImage 非常类似，具体如下：
 
@@ -515,7 +516,7 @@ custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
 ```
 
  
-##### 8.5.4 安装并配置 git
+##### **8.5.4 安装并配置 git**
 
 - **settings**
 
@@ -549,30 +550,21 @@ git push -u origin master -f
 
 我通常将其放在 sh 文件内，并在文件内的第一行添加 `#!/bin/sh`，这样就可以通过一行命令直接运行这三行命令，当然如果你想自动地、周期性的备份你的代码，你可以用 `crontab` 来将这个 sh 设置为周期性执行，这样你就无需手动备份啦！ 
 
-##### 8.5.5 远程桌面软件
+##### **8.5.5 远程桌面软件**
  
 对于Ubuntu用户来说，好的远程桌面软件也是十分重要的，这里我强烈推荐 AnyDesk，这是个非常轻量。易安装的远程桌面软件，没有 Vnc 那种额外的设置，只需要下载、安装，即可使用。
 
 使用 Anydesk 首先要去官网（[here](https://anydesk.com/zhs/downloads/linux) ）下载 ，之后安装之，安装后即可使用。
  
-### X. Ubuntu使用注意事项
+### **X. Ubuntu使用注意事项**
 
-#### X.1 对于更新
+#### **X.1 对于更新**
 
 在安装完所有驱动软件环境之后，尽量不进行系统更新，或者推迟它，不要尝试在设置中停止更新，因为我没找到，而且实际上我把软件更新给停了，给我造成好大不便，所以只需要记住关掉每次的更新弹窗即可。（不要动截图这里的东西：[http://i.imgur.com/w7Kvc7X.png](http://i.imgur.com/w7Kvc7X.png)）
 
-#### X.2 对于死机
+#### **X.2 对于死机**
 
 对 Ubuntu 来说，死机更多时候是桌面卡死，也就是假死，系统并没有死机，tty仍然可以进入，这时候**切记不要**断电重启，这种硬重启会给内核带来不明影响，说不定这样之后你系统就启动不了啦！
 
 正确的方法是：`Ctrl+Alt+F2/3/4`，进入 `tty2/3/4`，然后 `restart gdm/lightdm`，或者你如果记得你先前的错误操作，那么在此处回滚即可，亦或是等着什么也不做，有些情况下系统会在一段时间后从死机中恢复的。
-
-
-
-
-
-
-
-
-
 
