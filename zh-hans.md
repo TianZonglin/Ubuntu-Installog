@@ -1,7 +1,4 @@
-<fancybox>
-<img src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/20200809190237.png"/>
-</fancybox>
-
+![](https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/2020-07-28-22-24-15.png)
 
 这是一份完整的Ubuntu安装手册，可以帮助你快速初始化系统到可用状态，此手册包含两部分，包括Ubuntu系统的安装及配置、及GL相关开发环境的初始化。为了使行文更加清晰，文中插图全部以链接形式呈现，该手册仍然在完善中并已开源在Github。
 
