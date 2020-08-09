@@ -2,7 +2,7 @@
 
 
 
-**[English Version](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/Installations.md)**
+**[English Version](https://github.com/TianZonglin/Ubuntu-Installog/blob/master/README.md)**
 
 ## Ubuntu及GL环境安装手册 
 
