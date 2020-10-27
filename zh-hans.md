@@ -523,6 +523,9 @@ custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
 ```
 $ ssh-keygen -t rsa -C "YOUREMAIL"
 $ vim ~/.ssh/id_rsa.pub
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+
 ```
 
 然后去 Github -> Settings -> SSH and GPG keys -> New SSH key，然后把 rsa.pub 的内容拷贝到 key 这里。
