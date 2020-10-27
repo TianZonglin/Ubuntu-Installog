@@ -517,6 +517,9 @@ Note: I use Github to back up my project, these options are also worked for othe
 ```
 $ ssh-keygen -t rsa -C "YOUREMAIL"
 $ vim ~/.ssh/id_rsa.pub
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+
 
 Then go Github -> Settings
       -> SSH and GPG keys -> New SSH key
