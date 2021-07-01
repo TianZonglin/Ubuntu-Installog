@@ -226,6 +226,35 @@ then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
 
+#### 6.3 Anydesk*
+
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+apt update
+apt install anydesk
+
+#### 6.4 MS Outlook*
+
+sudo apt update
+sudo apt install snapd
+sudo snap install unofficial-webapp-office
+
+#### 6.5 Teams*
+
+#### 6.6 Snow Flake SSH*
+
+#### 6.7 rdesktop*
+
+#### 6.8 Krita*
+
+#### 6.9 Picgo*
+
+#### 6.10 Wechat*
+
+#### 6.11 qBittorrent*
+
+sudo apt install snapd
+sudo snap install electronic-wechat
 
 
 ### 7. change the theme with Tweaks
