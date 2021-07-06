@@ -368,7 +368,8 @@ If you want to play RedAlert2 or Yuri's Revenge with your Ubuntu, the easiest wa
 1. install cnc -->  snap install cncra2yr.
 2. download game files -->  download any version you like (just download the windows version).
 3. open cnc app and copy files (.mix and .dll) to the right path.
-4. enjoy & play.
+4. install, wait seconds.
+5. enjoy & play.
 
 ### 7. change the theme with Tweaks
 
