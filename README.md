@@ -225,43 +225,8 @@ install it directly in APP (Ubuntu Software).
 then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
-
-
-##### 6.3 picgo
  
-Everytime you want to share or publish your screenshot or othem images, then try to use PicGo. It's a useful tool that includes many kind of image-bed, the usage of it in Ubuntu is similar to the  wine qq.
- 
- ```
-Firstly, get picgo.png and make your own desktop file (any path is ok, mine is Downloads/)
-
-$ wget https://raw.githubusercontent.com/TianZonglin/tuchuang/master/img/opic.png
-$ vim QQ.desktop
-
-Secondly, copy the content, save and quit.
-
-[Desktop Entry]
-Name=PicGO
-Exec=/home/tzloop/Downloads/PicGo.AppImage
-Icon=/home/tzloop/Downloads/opic.png
-Type=Application
-StartupNotify=true
-
-Then, right-click the file, in permission page -> allow it execute as application
-Finally, copy it to your system applications' folder.
-```
-
-If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
-
-```
-repository name -> GITHUBACCOUNT/tuchuang
-branch name -> master
-token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
-storage path -> img/
-custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
-```
-
- 
-##### 6.4 git
+#### 6.3 git
 
 - **settings**
 
@@ -299,7 +264,7 @@ git push -u origin master -f
 Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically. Every time you want to back up your code, just run this sh file then backup done.
  
  
- ##### 6.5 remote desktop
+ #### 6.4 remote desktop
  
 I think a good remote application is very important for me and many other Ubuntu users. From my experience, I highly recommend the application named Anydesk, which is really easy to insatall and use. 
 
@@ -323,7 +288,7 @@ then cd into the file path, and run the following commands:
 % make install
 ```
 
-#### 6.6 MS Softwares / Outlook*
+#### 6.5 MS Softwares / Outlook*
 
 These are all light lunchers just aim to open the pages in your local browser.
 
@@ -333,11 +298,11 @@ sudo apt install snapd
 sudo snap install unofficial-webapp-office
 ```
 
-#### 6.5 Teams*
+#### 6.6 Teams*
 
 You can find this in Ubuntu Softwares.
 
-#### 6.6 Snow Flake SSH*
+#### 6.7 Snow Flake SSH*
 
 You can find this in Ubuntu Softwares.
 
@@ -353,23 +318,55 @@ This is the light way to use Wechat without wine or other extra environments.
 sudo apt install snapd
 sudo snap install electronic-wechat
 ```
+#### 6.10 picgo
+ 
+Everytime you want to share or publish your screenshot or othem images, then try to use PicGo. It's a useful tool that includes many kind of image-bed, the usage of it in Ubuntu is similar to the  wine qq.
+ 
+ ```
+Firstly, get picgo.png and make your own desktop file (any path is ok, mine is Downloads/)
 
-#### 6.10 qBittorrent
+$ wget https://raw.githubusercontent.com/TianZonglin/tuchuang/master/img/opic.png
+$ vim QQ.desktop
+
+Secondly, copy the content, save and quit.
+
+[Desktop Entry]
+Name=PicGO
+Exec=/home/tzloop/Downloads/PicGo.AppImage
+Icon=/home/tzloop/Downloads/opic.png
+Type=Application
+StartupNotify=true
+
+Then, right-click the file, in permission page -> allow it execute as application
+Finally, copy it to your system applications' folder.
+```
+
+If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
+
+```
+repository name -> GITHUBACCOUNT/tuchuang
+branch name -> master
+token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
+storage path -> img/
+custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
+```
+
+#### 6.11 qBittorrent
 
 You can find this in Ubuntu Softwares.
 
-#### 6.11 baiduNetdisk
+#### 6.12 baiduNetdisk
 
 You can just open one baidu netdisk resources in your browser, and try to download something, the webpage will try to open the netdisk application, and if you don't have it, it would give you a download window to choose which .rpm or .deb you'd like to install. Or you can just download the .deb package with this (maybe not working),
 
 https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb
 
-#### 6.12 CNCNet
+#### 6.13 CNCNet
 
 If you want to play RedAlert2 or Yuri's Revenge with your Ubuntu, the easiest way is to install cncra2yr.
 
 1. install cnc -->  snap install cncra2yr.
-2. download game files -->  download any version you like.
+2. download game files -->  download any version you like (just download the windows version).
 3. open cnc app and copy files (.mix and .dll) to the right path.
 4. enjoy & play.
 
