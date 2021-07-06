@@ -226,36 +226,152 @@ then, we can program code with vsc
   - open folder (ProjectionExplain)
   - Terminal->new terminal->make && ./projwiz -f DATA/segmentation lamp
 
-#### 6.3 Anydesk*
 
+##### 6.3 picgo
+ 
+Everytime you want to share or publish your screenshot or othem images, then try to use PicGo. It's a useful tool that includes many kind of image-bed, the usage of it in Ubuntu is similar to the  wine qq.
+ 
+ ```
+Firstly, get picgo.png and make your own desktop file (any path is ok, mine is Downloads/)
+
+$ wget https://raw.githubusercontent.com/TianZonglin/tuchuang/master/img/opic.png
+$ vim QQ.desktop
+
+Secondly, copy the content, save and quit.
+
+[Desktop Entry]
+Name=PicGO
+Exec=/home/tzloop/Downloads/PicGo.AppImage
+Icon=/home/tzloop/Downloads/opic.png
+Type=Application
+StartupNotify=true
+
+Then, right-click the file, in permission page -> allow it execute as application
+Finally, copy it to your system applications' folder.
+```
+
+If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
+
+```
+repository name -> GITHUBACCOUNT/tuchuang
+branch name -> master
+token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
+storage path -> img/
+custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
+```
+
+ 
+##### 6.4 git
+
+- **settings**
+
+Just use `sudo apt install git` to install git, then, we can make some settings to let us push/pull the remote bucket with no need of password and username. 
+
+Note: I use Github to back up my project, these options are also worked for other git servers.
+
+```
+$ ssh-keygen -t rsa -C "YOUREMAIL"
+$ vim ~/.ssh/id_rsa.pub
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+
+
+Then go Github -> Settings
+      -> SSH and GPG keys -> New SSH key
+You need to copy the content of rsa.pub to here. 
+
+$ git config --global user.name "YOURUSERNAME"
+$ git config --global user.email "YOUREMAIL"
+```
+
+Till now, we have finished the setting, and you could pull or push your code without username or password, but note that you must use SSH_URL to do these options.
+ 
+- **use case** 
+
+Go to Github and create a new repository named by your project name. Then use `git clone git@xx.git` to pull it into your system. Lastly, move all your project files into this git folder, and run the commands:
+
+```
+git add -A
+git commit -m "`date +%Y-%m-%d,%H:%m`" 
+git push -u origin master -f
+```
+
+Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically. Every time you want to back up your code, just run this sh file then backup done.
+ 
+ 
+ ##### 6.5 remote desktop
+ 
+I think a good remote application is very important for me and many other Ubuntu users. From my experience, I highly recommend the application named Anydesk, which is really easy to insatall and use. 
+
+**Win@Linux -> use Anydesk**
+
+```
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
 echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
 apt update
 apt install anydesk
+```
 
-#### 6.4 MS Outlook*
+**Linux@Linux -> ues rdesktop**
 
+Firstly, download the latest release in https://github.com/rdesktop/rdesktop/releases,
+then cd into the file path, and run the following commands:
+
+```
+% ./configure
+% make
+% make install
+```
+
+#### 6.6 MS Softwares / Outlook*
+
+These are all light lunchers just aim to open the pages in your local browser.
+
+```
 sudo apt update
 sudo apt install snapd
 sudo snap install unofficial-webapp-office
+```
 
 #### 6.5 Teams*
 
+You can find this in Ubuntu Softwares.
+
 #### 6.6 Snow Flake SSH*
 
-#### 6.7 rdesktop*
+You can find this in Ubuntu Softwares.
 
 #### 6.8 Krita*
 
-#### 6.9 Picgo*
+You can find this in Ubuntu Softwares.
 
-#### 6.10 Wechat*
+#### 6.9 Wechat*
 
-#### 6.11 qBittorrent*
+This is the light way to use Wechat without wine or other extra environments.
 
+```
 sudo apt install snapd
 sudo snap install electronic-wechat
+```
 
+#### 6.10 qBittorrent
+
+You can find this in Ubuntu Softwares.
+
+#### 6.11 baiduNetdisk
+
+You can just open one baidu netdisk resources in your browser, and try to download something, the webpage will try to open the netdisk application, and if you don't have it, it would give you a download window to choose which .rpm or .deb you'd like to install. Or you can just download the .deb package with this (maybe not working),
+
+https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb
+
+#### 6.12 CNCNet
+
+If you want to play RedAlert2 or Yuri's Revenge with your Ubuntu, the easiest way is to install cncra2yr.
+
+1. install cnc -->  snap install cncra2yr.
+2. download game files -->  download any version you like.
+3. open cnc app and copy files (.mix and .dll) to the right path.
+4. enjoy & play.
 
 ### 7. change the theme with Tweaks
 
@@ -501,83 +617,6 @@ Just search 'explorer.sortOrder' in settings and set it sorted by 'type', it's u
  
 The final view of vscode in my Ubuntu like this: (screenshot: [http://i.imgur.com/g7OehEL.png](http://i.imgur.com/g7OehEL.png))
  
- ##### 8.5.3 picgo
- 
-Everytime you want to share or publish your screenshot or othem images, then try to use PicGo. It's a useful tool that includes many kind of image-bed, the usage of it in Ubuntu is similar to the  wine qq.
- 
- ```
-Firstly, get picgo.png and make your own desktop file (any path is ok, mine is Downloads/)
-
-$ wget https://raw.githubusercontent.com/TianZonglin/tuchuang/master/img/opic.png
-$ vim QQ.desktop
-
-Secondly, copy the content, save and quit.
-
-[Desktop Entry]
-Name=PicGO
-Exec=/home/tzloop/Downloads/PicGo.AppImage
-Icon=/home/tzloop/Downloads/opic.png
-Type=Application
-StartupNotify=true
-
-Then, right-click the file, in permission page -> allow it execute as application
-Finally, copy it to your system applications' folder.
-```
-
-If you want to upload images by clipboard, you need to use `sudo apt install xclip` to install xclip. The quick settings of Github's image-bed are below.
-
-```
-repository name -> GITHUBACCOUNT/tuchuang
-branch name -> master
-token -> get a new one from Github (Settings -> Developer Settings -> Personal access tokens)
-storage path -> img/
-custom domain name -> https://cdn.jsdelivr.net/gh/GITHUBACCOUNT/tuchuang
-```
-
- 
-##### 8.5.4 install and set git
-
-- **settings**
-
-Just use `sudo apt install git` to install git, then, we can make some settings to let us push/pull the remote bucket with no need of password and username. 
-
-Note: I use Github to back up my project, these options are also worked for other git servers.
-
-```
-$ ssh-keygen -t rsa -C "YOUREMAIL"
-$ vim ~/.ssh/id_rsa.pub
-$ eval "$(ssh-agent -s)"
-$ ssh-add ~/.ssh/id_rsa
-
-
-Then go Github -> Settings
-      -> SSH and GPG keys -> New SSH key
-You need to copy the content of rsa.pub to here. 
-
-$ git config --global user.name "YOURUSERNAME"
-$ git config --global user.email "YOUREMAIL"
-```
-
-Till now, we have finished the setting, and you could pull or push your code without username or password, but note that you must use SSH_URL to do these options.
- 
-- **use case** 
-
-Go to Github and create a new repository named by your project name. Then use `git clone git@xx.git` to pull it into your system. Lastly, move all your project files into this git folder, and run the commands:
-
-```
-git add -A
-git commit -m "`date +%Y-%m-%d,%H:%m`" 
-git push -u origin master -f
-```
-
-Now your code should be pushed into Github.com and if you'd like to control the part of code that uploaded, then you need to change the file named `.gitignore`. And in my cases, I usually write these git commands into a \*.sh file so that I can run it just use one command like `./push.sh`, to do this, you need to add `#!/bin/sh` into the \*.sh file. With this file, you can also use `crontab` or something else to push your code automatically. Every time you want to back up your code, just run this sh file then backup done.
- 
- 
- ##### 8.5.5 remote desktop
- 
-I think a good remote application is very important for me and many other Ubuntu users. From my experience, I highly recommend the application named Anydesk, which is really easy to insatall and use. 
-
-To use it, just download the deb package from [here](https://anydesk.com/zhs/downloads/linux) and install it. Then, you can use it! No need to install extra packages or edit configurations.
  
  
 ### X. Ubuntu Using Tips
