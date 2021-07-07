@@ -361,6 +361,38 @@ You can just open one baidu netdisk resources in your browser, and try to downlo
 
 https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb
 
+
+#### 6.13 Install ADB & Fastboot on Ubuntu 18.04 / Linux Mint 19
+
+ADB comes included with Google's Android SDK but the package can be installed independently on Ubuntu 18.04 / Linux Mint 19. Install both ADB & Fastboot by running the commands below.
+
+```
+$ sudo apt update
+$ sudo apt-get install android-tools-adb android-tools-fastboot
+```
+
+Get ADB version details.
+
+$ adb version
+Android Debug Bridge version 1.0.36
+Revision 1:7.0.0+r33-2
+If you try list for connected devices, ADB server should be started if not already running.
+
+$ adb devices
+List of devices attached
+daemon not running. starting it now on port 5037 *
+daemon started successfully * 
+
+The Service can also be started by running:
+
+$ sudo adb start-server 
+
+You must enable USB debugging on your device to use adb over USB. Navigate to system settings, and enable it under Developer options. To reset your adb host, run:
+
+$ adb kill-server
+
+
+
 #### 6.13 CNCNet
 
 If you want to play RedAlert2 or Yuri's Revenge with your Ubuntu, the easiest way is to install cncra2yr.
